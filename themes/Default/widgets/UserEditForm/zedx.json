@@ -1,0 +1,11 @@
+{
+  "component"   : "widget",
+  "type"        : "Frontend",
+  "name"        : "UserEditForm",
+  "author"      : "Theme",
+  "title"       : "UserEditForm",
+  "groups"      : ["userEdit"],
+  "description" : "Description usereditform",
+  "keywords"    : [],
+  "version"     : "1.0.0"
+}

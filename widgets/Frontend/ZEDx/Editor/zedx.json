@@ -1,0 +1,11 @@
+{
+    "component": "widget",
+    "type": "Frontend",
+    "name": "Editor",
+    "title": "Editor",
+    "author": "ZEDx",
+    "groups": [],
+    "description": "Description Editor",
+    "keywords": [],
+    "version": "1.0.0"
+}

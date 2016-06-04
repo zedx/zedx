@@ -1,0 +1,30 @@
+<IfModule mod_rewrite.c>
+
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{THE_REQUEST} \s/+(.+?)/+[?\s]
+    RewriteRule /$ /%1 [L,R=301]
+
+    # RewriteBase /
+
+
+    ## Rewrite Robots
+    RewriteRule ^robots\.txt public/robots.txt [NC,L]
+
+    ## Rewrite favicon
+    RewriteRule ^favicon\.ico public/favicon.ico [NC,L]
+
+    ## Whitelist public files
+    RewriteRule !^public/.* index.php [L,NC]
+
+    ## Standard routes
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+
+</IfModule>

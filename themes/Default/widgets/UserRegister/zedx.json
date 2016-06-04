@@ -1,0 +1,11 @@
+{
+  "component"   : "widget",
+  "type"        : "Frontend",
+  "name"        : "UserRegister",
+  "author"      : "Theme",
+  "title"       : "UserRegister",
+  "groups"      : ["userRegister"],
+  "description" : "Description userregister",
+  "keywords"    : [],
+  "version"     : "1.0.0"
+}

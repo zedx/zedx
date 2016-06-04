@@ -1,0 +1,11 @@
+{
+  "component"   : "widget",
+  "type"        : "Frontend",
+  "name"        : "SearchAdsList",
+  "author"      : "Theme",
+  "title"       : "SearchAdsList",
+  "groups"      : ["adSearch"],
+  "description" : "Description searchadslist",
+  "keywords"    : [],
+  "version"     : "1.0.0"
+}

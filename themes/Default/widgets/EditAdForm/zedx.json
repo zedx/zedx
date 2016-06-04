@@ -1,0 +1,11 @@
+{
+  "component"   : "widget",
+  "type"        : "Frontend",
+  "name"        : "EditAdForm",
+  "author"      : "Theme",
+  "title"       : "EditAdForm",
+  "groups"      : ["userAdEdit"],
+  "description" : "Description editadform",
+  "keywords"    : [],
+  "version"     : "1.0.0"
+}

@@ -1,0 +1,11 @@
+{
+  "component"   : "widget",
+  "type"        : "Frontend",
+  "name"        : "SearchFilters",
+  "author"      : "Theme",
+  "title"       : "SearchFilters",
+  "groups"      : ["adSearch"],
+  "description" : "Description searchfilters",
+  "keywords"    : [],
+  "version"     : "1.0.0"
+}

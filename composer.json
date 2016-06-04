@@ -1,0 +1,38 @@
+{
+    "name": "zedx/zedx",
+    "description": "Complete and easily manageable Classifieds CMS",
+    "keywords": ["cms", "classifieds cms", "classified ads manager"],
+    "license": "MIT",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Amine Oudjehih",
+            "email": "amine.oudjehih@gmail.com",
+            "homepage": "https://zedx.io",
+            "role": "Founder"
+        }
+    ],
+    "require": {
+        "zedx/core": "3.0.0-beta"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "~1.4"
+    },
+    "autoload": {
+        "classmap": [
+            "bootstrap"
+        ],
+        "psr-4": {
+            "ZEDx\\Widgets\\": "widgets/",
+            "ZEDx\\Modules\\": "modules/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php artisan clear-compiled",
+            "php artisan optimize"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

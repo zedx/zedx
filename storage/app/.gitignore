@@ -1,0 +1,6 @@
+*
+!maps/
+!modules/
+!uploads/
+!views/
+!.gitignore

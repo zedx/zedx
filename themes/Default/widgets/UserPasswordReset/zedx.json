@@ -1,0 +1,11 @@
+{
+  "component"   : "widget",
+  "type"        : "Frontend",
+  "name"        : "UserPasswordReset",
+  "author"      : "Theme",
+  "title"       : "UserPasswordReset",
+  "groups"      : ["userPasswordReset"],
+  "description" : "Description userpasswordreset",
+  "keywords"    : [],
+  "version"     : "1.0.0"
+}

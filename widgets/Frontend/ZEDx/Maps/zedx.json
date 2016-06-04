@@ -1,0 +1,11 @@
+{
+    "component": "widget",
+    "type": "Frontend",
+    "name": "Maps",
+    "title": "Maps",
+    "author": "ZEDx",
+    "groups": [],
+    "description": "Description Maps",
+    "keywords": [],
+    "version": "1.0.0"
+}

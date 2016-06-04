@@ -1,0 +1,11 @@
+{
+  "component"   : "widget",
+  "type"        : "Frontend",
+  "name"        : "SearchQuery",
+  "author"      : "Theme",
+  "title"       : "SearchQuery",
+  "groups"      : ["adSearch"],
+  "description" : "Description searchquery",
+  "keywords"    : [],
+  "version"     : "1.0.0"
+}

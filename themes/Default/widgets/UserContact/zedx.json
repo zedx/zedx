@@ -1,0 +1,11 @@
+{
+  "component"   : "widget",
+  "type"        : "Frontend",
+  "name"        : "UserContact",
+  "author"      : "Theme",
+  "title"       : "UserContact",
+  "groups"      : ["adShow"],
+  "description" : "Description usercontact",
+  "keywords"    : [],
+  "version"     : "1.0.0"
+}

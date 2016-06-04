@@ -1,0 +1,11 @@
+{
+  "component"   : "widget",
+  "type"        : "Frontend",
+  "name"        : "AdCategoryAncestors",
+  "author"      : "Theme",
+  "title"       : "AdCategoryAncestors",
+  "groups"      : ["adShow"],
+  "description" : "Description adcategoryancestors",
+  "keywords"    : [],
+  "version"     : "1.0.0"
+}

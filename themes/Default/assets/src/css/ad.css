@@ -1,0 +1,25 @@
+.ad-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.ad-description {
+    font-family: "OpenSans", sans-serif;
+    /*white-space: pre;*/
+    line-height: 20px;
+    white-space: pre-wrap;
+    /* css-3 */
+    white-space: -moz-pre-wrap;
+    /* Mozilla, since 1999 */
+    white-space: -pre-wrap;
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    word-wrap: break-word;
+    /* Internet Explorer 5.5+ */
+}
+
+.thumbnail img {
+    height: 100px;
+    width: 100px;
+}

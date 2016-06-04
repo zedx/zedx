@@ -1,0 +1,15 @@
+{
+    "component": "widget",
+    "type": "Frontend",
+    "name": "UserMenu",
+    "author": "Theme",
+    "title": "UserMenu",
+    "groups": [
+      "userAdList", "userAdType", "userAdCreate", "userAdEdit",
+      "userAdtypeList", "userAdtypeCart", "userSubscriptionList",
+      "userSubscriptionCart", "userEdit"
+    ],
+    "description": "Description usermenu",
+    "keywords": [],
+    "version": "1.0.0"
+}

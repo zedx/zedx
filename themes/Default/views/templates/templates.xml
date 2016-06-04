@@ -1,0 +1,67 @@
+<templates>
+  <template identifier="content" title="content page" partials="header,footer">
+   <row>
+    <col grid="12">
+     <block identifier="content" title="Block content" />
+    </col>
+   </row>
+  </template>
+
+  <template identifier="search" title="Search page" partials="header,footer">
+   <row>
+    <col grid="12">
+     <block identifier="query" title="Block query" />
+    </col>
+   </row>
+   <row>
+    <col grid="4">
+     <block identifier="filters" title="Block filters" />
+    </col>
+    <col grid="8">
+     <block identifier="content" title="Block content" />
+    </col>
+   </row>
+  </template>
+
+  <template identifier="ad" title="Ad page" partials="header,footer">
+   <row>
+    <col grid="12">
+     <block identifier="categories" title="Categories list" />
+    </col>
+   </row>
+   <row>
+    <col grid="8">
+     <block identifier="content" title="Ad content" />
+    </col>
+    <col grid="4">
+     <block identifier="sideleft" title="sidebar" />
+    </col>
+   </row>
+  </template>
+
+  <template identifier="user" title="User page" partials="header,footer">
+   <row>
+    <col grid="3">
+     <block identifier="menu" title="Menu side" />
+    </col>
+    <col grid="9">
+     <block identifier="content" title="content" />
+    </col>
+   </row>
+  </template>
+
+  <template identifier="simple" title="Simple Page" partials="header,footer">
+   <row>
+    <col grid="2">
+     <block identifier="sideleft" title="Left side" />
+    </col>
+    <col grid="8">
+     <block identifier="content" title="content" />
+    </col>
+    <col grid="2">
+     <block identifier="sideright" title="Right side" />
+    </col>
+   </row>
+  </template>
+
+</templates>

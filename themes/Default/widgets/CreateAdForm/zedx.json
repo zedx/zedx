@@ -1,0 +1,11 @@
+{
+  "component"   : "widget",
+  "type"        : "Frontend",
+  "name"        : "CreateAdForm",
+  "author"      : "Theme",
+  "title"       : "CreateAdForm",
+  "groups"      : ["userAdCreate"],
+  "description" : "Description createadform",
+  "keywords"    : [],
+  "version"     : "1.0.0"
+}

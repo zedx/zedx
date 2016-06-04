@@ -1,0 +1,11 @@
+{
+  "component"   : "widget",
+  "type"        : "Frontend",
+  "name"        : "AdDetails",
+  "author"      : "Theme",
+  "title"       : "AdDetails",
+  "groups"      : ["adShow"],
+  "description" : "Description addetails",
+  "keywords"    : [],
+  "version"     : "1.0.0"
+}

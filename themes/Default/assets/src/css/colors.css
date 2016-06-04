@@ -1,0 +1,125 @@
+/* BACKGROUNDS   */
+
+.bg-color-blue {
+  background-color: #57889c !important;
+}
+.bg-color-blueLight {
+  background-color: #92a2a8 !important;
+}
+.bg-color-blueDark {
+  background-color: #4c4f53 !important;
+}
+.bg-color-green {
+  background-color: #356e35 !important;
+}
+.bg-color-greenLight {
+  background-color: #71843f !important;
+}
+.bg-color-greenDark {
+  background-color: #496949 !important;
+}
+.bg-color-red {
+  background-color: #a90329 !important;
+}
+.bg-color-yellow {
+  background-color: #b09b5b !important;
+}
+.bg-color-orange {
+  background-color: #c79121 !important;
+}
+.bg-color-orangeDark {
+  background-color: #a57225 !important;
+}
+.bg-color-pink {
+  background-color: #ac5287 !important;
+}
+.bg-color-pinkDark {
+  background-color: #a8829f !important;
+}
+.bg-color-purple {
+  background-color: #6e587a !important;
+}
+.bg-color-darken {
+  background-color: #404040 !important;
+}
+.bg-color-lighten {
+  background-color: #d5e7ec !important;
+}
+.bg-color-white {
+  background-color: #ffffff !important;
+}
+.bg-color-grayDark {
+  background-color: #525252 !important;
+}
+.bg-color-magenta {
+  background-color: #6e3671 !important;
+}
+.bg-color-teal {
+  background-color: #568a89 !important;
+}
+.bg-color-redLight {
+  background-color: #a65858 !important;
+}
+
+/* Colors */
+
+.color-blue {
+  color: #0073b7 !important;
+}
+.color-blueLight {
+  color: #92a2a8 !important;
+}
+.color-blueDark {
+  color: #4c4f53 !important;
+}
+.color-green {
+  color: #356e35 !important;
+}
+.color-greenLight {
+  color: #71843f !important;
+}
+.color-greenDark {
+  color: #496949 !important;
+}
+.color-red {
+  color: #a90329 !important;
+}
+.color-yellow {
+  color: #b09b5b !important;
+}
+.color-orange {
+  color: #FF851B !important;
+}
+.color-orangeDark {
+  color: #a57225 !important;
+}
+.color-pink {
+  color: #ac5287 !important;
+}
+.color-pinkDark {
+  color: #a8829f !important;
+}
+.color-purple {
+  color: #6e587a !important;
+}
+.color-darken {
+  color: #404040 !important;
+}
+.color-lighten {
+  color: #d5e7ec !important;
+}
+.color-white {
+  color: #ffffff !important;
+}
+.color-grayDark {
+  color: #525252 !important;
+}
+.color-magenta {
+  color: #6e3671 !important;
+}
+.color-teal {
+  color: #568a89 !important;
+}
+.color-redLight {
+  color: #a65858 !important;
+}

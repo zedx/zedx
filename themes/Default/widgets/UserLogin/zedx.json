@@ -1,0 +1,11 @@
+{
+  "component"   : "widget",
+  "type"        : "Frontend",
+  "name"        : "UserLogin",
+  "author"      : "Theme",
+  "title"       : "UserLogin",
+  "groups"      : ["userLogin"],
+  "description" : "Description userlogin",
+  "keywords"    : [],
+  "version"     : "1.0.0"
+}

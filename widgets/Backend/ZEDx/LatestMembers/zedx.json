@@ -1,0 +1,10 @@
+{
+    "component": "widget",
+    "type": "Backend",
+    "name": "LatestMembers",
+    "title": "LatestMembers",
+    "author": "ZEDx",
+    "description": "Description LatestMembers",
+    "keywords": [],
+    "version": "1.0.0"
+}

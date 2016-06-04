@@ -1,0 +1,11 @@
+{
+  "component"   : "widget",
+  "type"        : "Frontend",
+  "name"        : "AdtypeList",
+  "author"      : "Theme",
+  "title"       : "AdtypeList",
+  "groups"      : ["userAdtypeList"],
+  "description" : "Description adtypelist",
+  "keywords"    : [],
+  "version"     : "1.0.0"
+}

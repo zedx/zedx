@@ -1,0 +1,11 @@
+{
+  "component"   : "widget",
+  "type"        : "Frontend",
+  "name"        : "UserSubscriptionsList",
+  "author"      : "Theme",
+  "title"       : "UserSubscriptionsList",
+  "groups"      : ["userSubscriptionList"],
+  "description" : "Description usersubscriptionslist",
+  "keywords"    : [],
+  "version"     : "1.0.0"
+}

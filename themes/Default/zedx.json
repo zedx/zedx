@@ -1,0 +1,18 @@
+{
+    "type": "theme",
+    "slug": "default3",
+    "name": "Default3",
+    "author": "ZEDx",
+    "description": "Description default3 theme.",
+    "partials":[
+      {
+        "file": "header",
+        "title": "Header"
+      },
+      {
+        "file": "footer",
+        "title": "Footer"
+      }
+    ],
+    "version": "1.0.0"
+}

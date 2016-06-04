@@ -1,0 +1,11 @@
+{
+  "component"   : "widget",
+  "type"        : "Frontend",
+  "name"        : "UserPasswordEmail",
+  "author"      : "Theme",
+  "title"       : "UserPasswordEmail",
+  "groups"      : ["userPasswordEmail"],
+  "description" : "Description userpasswordemail",
+  "keywords"    : [],
+  "version"     : "1.0.0"
+}

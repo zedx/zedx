@@ -1,0 +1,11 @@
+{
+  "component"   : "widget",
+  "type"        : "Frontend",
+  "name"        : "UserAds",
+  "author"      : "Theme",
+  "title"       : "UserAds",
+  "groups"      : ["userAdList"],
+  "description" : "Description userads",
+  "keywords"    : [],
+  "version"     : "1.0.0"
+}
