@@ -3,3 +3,4 @@
 *.js linguist-vendored
 *.html linguist-vendored
 *.less linguist-vendored
+*.svg linguist-vendored
