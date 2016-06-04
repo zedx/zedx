@@ -5,15 +5,15 @@
     "transform": "t-15.81,0.25",
     "animate": {
         "attributes": {
-            "fill": "#FFCC00"
+            "fill": "#1abc9c"
         }
     },
     "attributes": {
+        "fill": "#2c3e50",
+        "stroke": "#ffffff",
+        "stroke-width": "2",
         "width": "40%",
         "height": "40%",
-        "fill": "#6699CC",
-        "stroke": "#FFFFFF",
-        "stroke-width": "2",
         "stroke-linejoin": "round",
         "cursor": "pointer"
     },

@@ -5,11 +5,11 @@
     "transform": "t0.25,-217.7",
     "animate": {
         "attributes": {
-            "fill": "#ffcc00"
+            "fill": "#1abc9c"
         }
     },
     "attributes": {
-        "fill": "#6699cc",
+        "fill": "#2c3e50",
         "stroke": "#ffffff",
         "stroke-width": "2",
         "width": "40%",
