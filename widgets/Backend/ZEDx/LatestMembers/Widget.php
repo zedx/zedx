@@ -2,8 +2,8 @@
 
 namespace ZEDx\Widgets\Backend\ZEDx\LatestMembers;
 
-use ZEDx\Models\User;
 use ZEDx\Components\Widget as BaseWidget;
+use ZEDx\Models\User;
 
 class Widget extends BaseWidget
 {
