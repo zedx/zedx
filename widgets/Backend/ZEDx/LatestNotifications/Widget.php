@@ -2,8 +2,8 @@
 
 namespace ZEDx\Widgets\Backend\ZEDx\LatestNotifications;
 
-use ZEDx\Models\Notification;
 use ZEDx\Components\Widget as BaseWidget;
+use ZEDx\Models\Notification;
 
 class Widget extends BaseWidget
 {

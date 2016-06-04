@@ -2,8 +2,8 @@
 
 namespace ZEDx\Widgets\Backend\ZEDx\LatestAds;
 
-use ZEDx\Models\Ad;
 use ZEDx\Components\Widget as BaseWidget;
+use ZEDx\Models\Ad;
 
 class Widget extends BaseWidget
 {
