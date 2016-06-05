@@ -180,7 +180,7 @@ $(document).ready(function() {
     blurOnChange: true,
     openOnEnter: false,
     ajax: {
-      url: "http://maps.google.com/maps/api/geocode/json",
+      url: "https://maps.google.com/maps/api/geocode/json",
       type: "GET",
       dataType: 'json',
       data: function(term, page) {
@@ -198,7 +198,7 @@ $(document).ready(function() {
     initSelection: function(element, callback) {
       var formatted_address = $(element).val();
       if (formatted_address !== "") {
-        $.ajax("http://maps.google.com/maps/api/geocode/json", {
+        $.ajax("https://maps.google.com/maps/api/geocode/json", {
           data: {
             sensor: false,
             address: formatted_address,
@@ -546,7 +546,7 @@ $(document).ready(function() {
     blurOnChange: true,
     openOnEnter: false,
     ajax: {
-      url: "http://maps.google.com/maps/api/geocode/json",
+      url: "https://maps.google.com/maps/api/geocode/json",
       type: "GET",
       dataType: 'json',
       data: function(term, page) {
@@ -565,7 +565,7 @@ $(document).ready(function() {
     initSelection: function(element, callback) {
       var id = $(element).val();
       if (id !== "") {
-        $.ajax("http://maps.google.com/maps/api/geocode/json", {
+        $.ajax("https://maps.google.com/maps/api/geocode/json", {
           data: {
             sensor: false,
             components: $("#ZxAjaxGeo-search").data("components"), // Filter by country
