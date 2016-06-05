@@ -40,7 +40,7 @@
 </div>
 @section('script')
     <script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
-    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <script src="{{ public_asset('widgets/frontend/zedx/maps/js/d3.tip.v0.6.3.js') }}"></script>
     <script type="text/javascript" src="{{ public_asset('widgets/frontend/zedx/maps/js/mapReader.js') }}"></script>
     <script type="text/javascript" src="{{ public_asset('widgets/frontend/zedx/maps/js/spy.js') }}"></script>
 @append
