@@ -22,6 +22,8 @@ If you discover a security vulnerability within ZEDx, please send an email to [s
 
 - Read the [Contributor License Agreement](#contributor-license-agreement).
 
+- We are using [Long-Running Branches Workflow](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows#Long-Running-Branches)
+
 - Checkout a topic branch from `develop` and merge back against `develop`.
 
 - [Squash the commits](http://davidwalsh.name/squash-commits-git) if there are too many small ones.
