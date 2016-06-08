@@ -1,6 +1,8 @@
 composer.lock
 /node_modules
 /vendor
+/database
+/widgets/Frontend/Theme
 .php_cs.cache
 .env
 .htaccess
