@@ -46,7 +46,7 @@
         //
         // This HTML will be placed inside 'lazyYT' container
 
-        innerHtml.push('<div class="ytp-thumbnail">');
+        innerHtml.push('<div class="ytp-thumbnail" rel="'+id+'">');
 
           // Play button from YouTube (exactly as it is in YouTube)
           innerHtml.push('<div class="ytp-large-play-button"');
@@ -95,15 +95,15 @@
         })
           .addClass('lazyYT-image-loaded')
           .on('click', function (e) {
-            e.preventDefault();
-            if (!$el.hasClass('lazyYT-video-loaded') && $thumb.hasClass('lazyYT-image-loaded')) {
-              $el.html('<iframe src="//www.youtube.com/embed/' + id + '?autoplay=1&' + youtube_parameters + '" frameborder="0" allowfullscreen></iframe>')
-                .addClass('lazyYT-video-loaded');
-            }
+            // e.preventDefault();
+            // if (!$el.hasClass('lazyYT-video-loaded') && $thumb.hasClass('lazyYT-image-loaded')) {
+            //   $el.html('<iframe src="//www.youtube.com/embed/' + id + '?autoplay=1&' + youtube_parameters + '" frameborder="0" allowfullscreen></iframe>')
+            //     .addClass('lazyYT-video-loaded');
+            // }
           });
 
-        $.getJSON('https://gdata.youtube.com/feeds/api/videos/' + id + '?v=2&alt=json', function (data) {
-            $el.find('#lazyYT-title-' + id).text(data.entry.title.$t);
+        $.getJSON('https://noembed.com/embed?url=https://www.youtube.com/watch?v=' + id, function (data) {
+            $el.find('#lazyYT-title-' + id).text(data.title);
         });
 
     }
