@@ -25,6 +25,7 @@ module.exports = function (elixir, fs) {
             'libs/select2/select2.min.js',
             'libs/mustache.js/mustache.min.js',
             'libs/lazyYT/lazyYT.js',
+            'libs/bootstrap.youtubepopup/bootstrap.youtubepopup.js',
             'libs/jquery-form/jquery.form.js',
             'libs/metisMenu/metisMenu.min.js',
             'js/reverseTable.js',
