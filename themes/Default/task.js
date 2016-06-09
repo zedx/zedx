@@ -28,6 +28,7 @@ module.exports = function (elixir, fs) {
             'libs/bootstrap.youtubepopup/bootstrap.youtubepopup.js',
             'libs/jquery-form/jquery.form.js',
             'libs/metisMenu/metisMenu.min.js',
+            'libs/jquery.bxslider/jquery.bxslider.min.js',
             'js/reverseTable.js',
             'js/config.js',
             'js/zedx/ad.js',
@@ -53,6 +54,8 @@ module.exports = function (elixir, fs) {
                 'libs/select2-bootstrap-css/select2-bootstrap.css',
                 'libs/lazyYT/lazyYT.css',
                 'libs/flag-icon-css/css/flag-icon.min.css',
+                'libs/jquery.bxslider/jquery.bxslider.css',
+                'css/bxslider-override.css',
                 'css/social-icons.css',
                 'css/select2-flatui.css',
                 'css/colors.css',
@@ -72,6 +75,7 @@ module.exports = function (elixir, fs) {
             .copy(_root + "libs/select2/select2.png", "public/build/frontend/css/")
             .copy(_root + "libs/select2/select2-spinner.gif", "public/build/frontend/css/")
             .copy(_root + "libs/flag-icon-css/flags/", "public/build/frontend/flags")
-            .copy(_root + "libs/ion.rangeslider/img/", "public/build/frontend/img/");
+            .copy(_root + "libs/ion.rangeslider/img/", "public/build/frontend/img/")
+            .copy(_root + "libs/jquery.bxslider/img/", "public/build/frontend/img/");
     });
 };

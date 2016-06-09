@@ -16,23 +16,28 @@
           </h4>
         </div>
         <hr >
-        @if ($main_pic = $ad->photos()->main()->first())
+
+        {{--*/ $photos = $ad->photos;  /*--}}
+        @if ($photos->count())
         <div class="row">
-            <div class="col-md-12">
-                <img id="main_image" class="img-rounded img-responsive center-block" data-root-path = "{{ image_route('large', '') }}" src="{{ image_route('large', $main_pic->path) }}" alt="">
-            </div>
+          <div class="col-md-12">
+            <ul class="bxslider">
+              @foreach ($photos as $photo)
+                <li><img class="img-rounded center-block" src="{{ image_route('large', $photo->path) }}" /></li>
+              @endforeach
+            </ul>
+          </div>
+        </div>
+
+        <div id="bx-pager" class="row">
+          @foreach ($photos as $key => $photo)
+            <a data-slide-index="{{ $key }}" href=""><img class="img-rounded small-image" src="{{ image_route('thumb', $photo->path) }}" /></a>
+          @endforeach
         </div>
         @endif
-        @if ($ad->photos()->count() > 1)
-        <div class="row top-buffer">
-        @foreach ($ad->photos()->get() as $photo)
-            <div class="col-xs-3 col-sm-2">
-                <img class="img-rounded img-ressponsive small-image" data-path="{{ $photo->path }}" src="{{ image_route('thumb', $photo->path) }}" alt="">
-            </div>
-        @endforeach
-        </div>
-        @endif
-        <hr/>
+
+        <hr />
+
         @if ($ad->videos()->count())
         <div id="videos" class="row top-buffer" data-videos="{{ $ad->videos }}">
           <script type="x-tmpl-mustache" id="videoTemplate">

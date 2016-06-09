@@ -1,4 +1,8 @@
 $(document).ready(function() {
+  $('.bxslider').bxSlider({
+    pagerCustom: '#bx-pager'
+  });
+
   function in_array(needle, haystack) {
     var key = '';
 

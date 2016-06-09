@@ -1,0 +1,46 @@
+.bx-wrapper {
+    margin: 0 auto 30px;
+}
+
+.bx-wrapper .bx-controls-direction a {
+  z-index: 100;
+}
+
+.bx-wrapper .bx-loading {
+  background: url('../img/bx_loader.gif') center center no-repeat #ffffff;
+}
+
+.bx-wrapper .bx-prev {
+  background: url('../img/controls.png') no-repeat 0 -32px;
+}
+
+.bx-wrapper .bx-next {
+  background: url('../img/controls.png') no-repeat -43px -32px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start {
+  background: url('../img/controls.png') -86px -11px no-repeat;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop {
+  background: url('../img/controls.png') -86px -44px no-repeat;
+}
+
+#bx-pager {
+    text-align: center;
+    margin-top: -20px;
+}
+
+#bx-pager a {
+    margin: 0 3px;
+}
+
+#bx-pager a img {
+    padding: 3px;
+    border: solid #ccc 1px;
+}
+
+#bx-pager a:hover img,
+#bx-pager a.active img {
+    border: solid #5280DD 1px;
+}
