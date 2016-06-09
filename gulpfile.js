@@ -10,6 +10,11 @@ var elixir = require('laravel-elixir'),
 
 elixir.config.sourcemaps = false;
 
+elixir.config.css.minifier.pluginOptions = {
+    keepSpecialComments: 0,
+    processImport: false
+};
+
 require(backendTask)(elixir, fs);
 require(frontendTask)(elixir, fs);
 require(versionTask)(elixir, fs);
