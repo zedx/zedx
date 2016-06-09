@@ -1,9 +1,9 @@
 {
     "type": "theme",
-    "slug": "default3",
-    "name": "Default3",
+    "slug": "default",
+    "name": "Default",
     "author": "ZEDx",
-    "description": "Description default3 theme.",
+    "description": "Description default theme.",
     "partials":[
       {
         "file": "header",
