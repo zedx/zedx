@@ -27,7 +27,7 @@
 }
 
 .ad-preview .ad-price-label {
-    top: 77px;
+    top: 100px;
 }
 
 .ad-title {
@@ -70,6 +70,5 @@
 }
 
 .thumbnail img {
-    height: 100px;
-    width: 100px;
+    max-width: 100%;
 }
