@@ -4,13 +4,15 @@
       <h4 class="text-center"><i class="fa fa-home"></i> {!! trans('frontend.ad.preview_mode') !!} </h4>
       <div class="text-center fs18">
       @if ($ad->adstatus->title == 'validate')
-        <span class="label label-success"><i class="fa fa-check"></i> {!! trans('frontend.user.ad.validated_ad') !!}</span>
+        <span class="label label-success"><i class="fa fa-check"></i> {!! trans('frontend.ad.validated_ad') !!}</span>
       @elseif ($ad->adstatus->title == 'pending')
-        <span class="label label-info"><i class="fa fa-hourglass-start"></i> {!! trans('frontend.user.ad.pending_ad') !!}</span>
+        <span class="label label-info"><i class="fa fa-hourglass-start"></i> {!! trans('frontend.ad.pending_ad') !!}</span>
       @elseif ($ad->adstatus->title == 'expired')
-        <span class="label label-warning"><i class="fa fa-hourglass-end"></i> {!! trans('frontend.user.ad.expired_ad') !!}</span>
+        <span class="label label-warning"><i class="fa fa-hourglass-end"></i> {!! trans('frontend.ad.expired_ad') !!}</span>
       @elseif ($ad->adstatus->title == 'banned')
-        <span class="label label-danger"><i class="fa fa-ban"></i> {!! trans('frontend.user.ad.banished_ad') !!}</span>
+        <span class="label label-danger"><i class="fa fa-ban"></i> {!! trans('frontend.ad.banished_ad') !!}</span>
+      @elseif ($ad->adstatus->title == 'trashed')
+        <span class="label label-danger"><i class="fa fa-trash"></i> {!! trans('frontend.ad.trashed_ad') !!}</span>
       @endif
       </div>
     </div>
