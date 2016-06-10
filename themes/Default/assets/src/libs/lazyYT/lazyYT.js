@@ -61,15 +61,15 @@
         innerHtml.push('</div>'); // end of .ytp-thumbnail
 
         // Video title (info bar)
-        innerHtml.push('<div class="html5-info-bar">');
-        innerHtml.push('<div class="html5-title">');
-        innerHtml.push('<div class="html5-title-text-wrapper">');
-        innerHtml.push('<a id="lazyYT-title-', id, '" class="html5-title-text" target="_blank" tabindex="3100" href="https://www.youtube.com/watch?v=', id, '">');
-        innerHtml.push(loading_text);
-        innerHtml.push('</a>');
-        innerHtml.push('</div>'); // .html5-title
-        innerHtml.push('</div>'); // .html5-title-text-wrapper
-        innerHtml.push('</div>'); // end of Video title .html5-info-bar
+        // innerHtml.push('<div class="html5-info-bar">');
+        // innerHtml.push('<div class="html5-title">');
+        // innerHtml.push('<div class="html5-title-text-wrapper">');
+        // innerHtml.push('<a id="lazyYT-title-', id, '" class="html5-title-text" target="_blank" tabindex="3100" href="https://www.youtube.com/watch?v=', id, '">');
+        // innerHtml.push(loading_text);
+        // innerHtml.push('</a>');
+        // innerHtml.push('</div>'); // .html5-title
+        // innerHtml.push('</div>'); // .html5-title-text-wrapper
+        // innerHtml.push('</div>'); // end of Video title .html5-info-bar
 
         $el.css({
             'padding-bottom': padding_bottom
