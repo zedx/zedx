@@ -36,8 +36,8 @@
     <!-- Page Content -->
     <div class="container">
     {{ #__blocks }}
-    {{ #footer }}
     </div>
+    {{ #footer }}
     <!-- /.container -->
 
     <script src="{{ public_asset(elixir_frontend('js/scripts.js')) }}"></script>

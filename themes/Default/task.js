@@ -64,6 +64,7 @@ module.exports = function (elixir, fs) {
                 'css/btn-file.css',
                 'css/helpers.css',
                 'css/ad.css',
+                'css/footer.css',
                 'css/radiocheck.css',
                 'css/style.css',
             ], 'public/frontend/css/styles.css', _root)
