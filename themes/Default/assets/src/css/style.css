@@ -1,12 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
+html {
+  position: relative;
+  min-height: 100%;
+}
 body {
     background: #e7ebf2;
     font-family: "Lato", Helvetica, Arial, sans-serif;
     font-size: 13px;
     overflow-y: scroll;
     padding-top: 70px;
+    margin-bottom: 200px;
 }
-
 
 /* Header Navbar */
 
