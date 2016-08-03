@@ -104,3 +104,7 @@ small {
 .mb10 {
     margin-bottom: 10px;
 }
+
+.no-radius {
+    border-radius: 0;
+}
