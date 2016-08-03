@@ -30,10 +30,8 @@
       </div>
       <div class="col-md-7">
          <h4><a href="{{ route('ad.show', array($ad->id, str_slug($ad->title))) }}">@if ($ad->is_headline) <i class="fa fa-star color-orange"></i> @endif {{ $ad->title }}</a></h4>
-        <div>
-        {{ $ad->published_at->diffForHumans() }}
-        </div>
-
+        <p>{{ $ad->published_at->diffForHumans() }}</p>
+        @include('widget_frontend_theme_searchadslist::_partials.fields')
       </div>
        <div class="col-md-3">
         <h5>{{ ($price = $ad->price()) && isset($price->pivot) ? number_format($price->pivot->value, trans('frontend.format.number.decimals') , trans('frontend.format.number.dec_point'), trans('frontend.format.number.thousands_sep'))." ".getAdCurrency($ad, $price->unit) : ""  }}</h5>

@@ -36,7 +36,7 @@ class Widget extends BaseWidget
 
         return view('widget_frontend_theme_addetails::index', [
             'ad'     => $ad,
-            'fields' => $this->getAdFields($ad),
+            'fields' => getAdFields($ad),
         ]);
     }
 
@@ -52,27 +52,5 @@ class Widget extends BaseWidget
         return view('widget_frontend_theme_addetails::setting', [
             'config' => $this->config,
         ]);
-    }
-
-    protected function getAdFields(Ad $ad)
-    {
-        $mergedFields = [];
-
-        if (!$ad->has('fields')) {
-            return [];
-        }
-
-        $fields = $ad->fields()->orderBy('is_price', 'desc')->with('select')->whereIsInAd(true)->get();
-
-        foreach ($fields as $field) {
-            if (isset($mergedFields[$field->id])) {
-                $value = $mergedFields[$field->id]['value'];
-                $mergedFields[$field->id]['value'] = is_array($value) ? array_merge($value, [$field->pivot->value]) : [$value, $field->pivot->value];
-            } else {
-                $mergedFields[$field->id] = ['value' => $field->pivot->value];
-            }
-        }
-
-        return collect($mergedFields);
     }
 }

@@ -85,7 +85,7 @@
           <div class="col-md-12">
             <div class="ad-fields">
               <table class="table table-striped table-hover ">
-                <tbody id="adFields" data-currency="{{ getAdCurrency($ad, '{currency}') }}" data-fields="{{ $fields }}" data-type = "show" data-category-api-url= "{{ route('zxajax.category.searchFields', $ad->category->id) }}">
+                <tbody id="adFields" data-currency="{{ getAdCurrency($ad, '{currency}') }}" data-fields="{{ $fields }}" data-type = "show" data-category-api-url= "{{ route('zxajax.category.adFields', $ad->category->id) }}">
                 </tbody>
               </table>
               <script type="x-tmpl-mustache" id="adFieldsTemplate_multiple">
