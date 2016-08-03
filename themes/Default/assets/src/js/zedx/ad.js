@@ -93,7 +93,7 @@ $(document).ready(function() {
           field._to = adFields[field.id].value.max;
         }
       }else{
-        var value = adFields[field.id].value
+        var value = adFields[field.id].value;
         field.value = field.is_format ? formatNumber("#adFieldsTemplate_input", value) : value;
       }
     }
