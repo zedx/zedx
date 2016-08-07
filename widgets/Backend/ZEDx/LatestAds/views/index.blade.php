@@ -5,7 +5,7 @@
       @if ($main_pic = $ad->photos()->main()->first())
         <img src="{{ image_route('thumb', $main_pic->path) }}" class="img-responsive img-rounded">
       @else
-        <i class="fa fa-picture-o" style="font-size:70px"></i>
+        <i class="fa fa-picture-o" style="font-size:50px"></i>
       @endif
     </div>
     <div class="product-info">

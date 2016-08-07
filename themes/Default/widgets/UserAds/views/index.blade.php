@@ -49,6 +49,9 @@
         <div class="col-md-5">
         <h4><a href="{{ route('ad.preview', array($ad->id, str_slug($ad->content->title))) }}">{{ $ad->content->title }}</a></h4>
             <p>{{ str_limit(strip_tags($ad->content->body), 100, "...") }}</p>
+
+            @include('widget_frontend_theme_userads::_partials.fields')
+
             @if ($ad->adstatus->title == 'expired' && $ad->adtype->can_renew)
             {!! Form::model($ad, ['method' => 'PUT', 'route' => ['user.ad.renew', $ad->id]]) !!}
                 <p><button type="submit" class="btn btn-warning btn-xs"><i class="fa fa-level-up"></i> {!! trans("frontend.user.ad.renew_ad") !!}</button></p>

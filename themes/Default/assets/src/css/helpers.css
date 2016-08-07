@@ -23,6 +23,35 @@
     border: 0px!important;
 }
 
+.no-margin {
+    margin: 0
+}
+
+.fs12 {
+    font-size: 12px
+}
+.fs13 {
+    font-size: 13px
+}
+.fs16 {
+    font-size: 16px
+}
+.fs18 {
+    font-size: 18px
+}
+.lh18 {
+    line-height: 18px
+}
+.lh22 {
+    line-height: 22px
+}
+.lh30 {
+    line-height: 30px
+}
+.lh36 {
+    line-height: 36px
+}
+
 .highlight {
     margin-bottom: 14px;
     background-color: #f7f7f9;
@@ -70,4 +99,12 @@ small {
 
 .margin-right-10 {
     margin-right: 10px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.no-radius {
+    border-radius: 0;
 }

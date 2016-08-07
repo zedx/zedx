@@ -44,7 +44,7 @@
           <div class="caption">
             <div class="btn-group btn-group-justified" role="group">
               <div class="btn-group">
-                <button type="button" class="btn btn-xs btn-primary btn-file btn-block"><i class="fa fa-picture-o"></i> <span class="text">{!! trans('frontend.user.ad.add_a_photo') !!}</span> <input class="addAdPhotos" type="file" name="photos[]"></button>
+                <div class="btn btn-xs btn-primary btn-file btn-block"><i class="fa fa-picture-o"></i> <span class="text">{!! trans('frontend.user.ad.add_a_photo') !!}</span> <input class="addAdPhotos" type="file" name="photos[]"></div>
               </div>
             </div>
           </div>

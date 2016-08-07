@@ -46,7 +46,7 @@
         //
         // This HTML will be placed inside 'lazyYT' container
 
-        innerHtml.push('<div class="ytp-thumbnail">');
+        innerHtml.push('<div class="ytp-thumbnail" rel="'+id+'">');
 
           // Play button from YouTube (exactly as it is in YouTube)
           innerHtml.push('<div class="ytp-large-play-button"');
@@ -61,15 +61,15 @@
         innerHtml.push('</div>'); // end of .ytp-thumbnail
 
         // Video title (info bar)
-        innerHtml.push('<div class="html5-info-bar">');
-        innerHtml.push('<div class="html5-title">');
-        innerHtml.push('<div class="html5-title-text-wrapper">');
-        innerHtml.push('<a id="lazyYT-title-', id, '" class="html5-title-text" target="_blank" tabindex="3100" href="https://www.youtube.com/watch?v=', id, '">');
-        innerHtml.push(loading_text);
-        innerHtml.push('</a>');
-        innerHtml.push('</div>'); // .html5-title
-        innerHtml.push('</div>'); // .html5-title-text-wrapper
-        innerHtml.push('</div>'); // end of Video title .html5-info-bar
+        // innerHtml.push('<div class="html5-info-bar">');
+        // innerHtml.push('<div class="html5-title">');
+        // innerHtml.push('<div class="html5-title-text-wrapper">');
+        // innerHtml.push('<a id="lazyYT-title-', id, '" class="html5-title-text" target="_blank" tabindex="3100" href="https://www.youtube.com/watch?v=', id, '">');
+        // innerHtml.push(loading_text);
+        // innerHtml.push('</a>');
+        // innerHtml.push('</div>'); // .html5-title
+        // innerHtml.push('</div>'); // .html5-title-text-wrapper
+        // innerHtml.push('</div>'); // end of Video title .html5-info-bar
 
         $el.css({
             'padding-bottom': padding_bottom
@@ -91,19 +91,19 @@
         }
 
         $thumb = $el.find('.ytp-thumbnail').css({
-            'background-image': ['url(http://img.youtube.com/vi/', id, '/', thumb_img, ')'].join('')
+            'background-image': ['url(https://img.youtube.com/vi/', id, '/', thumb_img, ')'].join('')
         })
           .addClass('lazyYT-image-loaded')
           .on('click', function (e) {
-            e.preventDefault();
-            if (!$el.hasClass('lazyYT-video-loaded') && $thumb.hasClass('lazyYT-image-loaded')) {
-              $el.html('<iframe src="//www.youtube.com/embed/' + id + '?autoplay=1&' + youtube_parameters + '" frameborder="0" allowfullscreen></iframe>')
-                .addClass('lazyYT-video-loaded');
-            }
+            // e.preventDefault();
+            // if (!$el.hasClass('lazyYT-video-loaded') && $thumb.hasClass('lazyYT-image-loaded')) {
+            //   $el.html('<iframe src="//www.youtube.com/embed/' + id + '?autoplay=1&' + youtube_parameters + '" frameborder="0" allowfullscreen></iframe>')
+            //     .addClass('lazyYT-video-loaded');
+            // }
           });
 
-        $.getJSON('https://gdata.youtube.com/feeds/api/videos/' + id + '?v=2&alt=json', function (data) {
-            $el.find('#lazyYT-title-' + id).text(data.entry.title.$t);
+        $.getJSON('https://noembed.com/embed?url=https://www.youtube.com/watch?v=' + id, function (data) {
+            $el.find('#lazyYT-title-' + id).text(data.title);
         });
 
     }

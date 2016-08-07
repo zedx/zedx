@@ -42,7 +42,17 @@
 
         <td>@if ($numbers[$adtype->id] >= 9999) <span class="label label-success">{!! mb_strtoupper(trans('frontend.user.adtype.unlimited')) !!}</span> @elseif ($numbers[$adtype->id] <= 0) <b><span class="text-danger"> 0 </span></b> @else <b><span class="text-success">{{ $numbers[$adtype->id] }}</span></b> @endif</td>
 
-        <td>@if ($adtype->price > 0) <h3>{{ number_format($adtype->price, 2 , trans('frontend.format.number.dec_point'), trans('frontend.format.number.thousands_sep')) }} {{ $currency }}</h3> @else <h3 class="text-success">{!! mb_strtoupper(trans('frontend.user.adtype.free')) !!}</h3> @endif</td>
+        <td>
+        @if ($adtype->price > 0)
+          @if ($numbers[$adtype->id] > 0)
+          <del><h3>{{ number_format($adtype->price, 2 , trans('frontend.format.number.dec_point'), trans('frontend.format.number.thousands_sep')) }} {{ $currency }}</h3></del>
+          @else
+          <h3>{{ number_format($adtype->price, 2 , trans('frontend.format.number.dec_point'), trans('frontend.format.number.thousands_sep')) }} {{ $currency }}</h3>
+          @endif
+        @else
+          <h3 class="text-success">{!! mb_strtoupper(trans('frontend.user.adtype.free')) !!}</h3>
+        @endif
+        </td>
         <td>
           @if ($numbers[$adtype->id] > 0)
             <a href="{!! route('user.ad.create', $adtype->id) !!}" class="btn btn-success"><i class="fa fa-plus"></i> {!! trans('frontend.user.adtype.add') !!}</a>

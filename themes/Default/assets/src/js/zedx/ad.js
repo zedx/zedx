@@ -1,4 +1,8 @@
 $(document).ready(function() {
+  $('.bxslider').bxSlider({
+    pagerCustom: '#bx-pager'
+  });
+
   function in_array(needle, haystack) {
     var key = '';
 
@@ -89,7 +93,7 @@ $(document).ready(function() {
           field._to = adFields[field.id].value.max;
         }
       }else{
-        var value = adFields[field.id].value
+        var value = adFields[field.id].value;
         field.value = field.is_format ? formatNumber("#adFieldsTemplate_input", value) : value;
       }
     }
@@ -339,6 +343,7 @@ $(document).ready(function() {
     var html = Mustache.to_html($("#videoTemplate").html(), videos);
     $("#videos").append(html);
     $('.js-lazyYT').lazyYT();
+    $('.ytp-thumbnail').YouTubeModal({autoplay:true, width:640, height:480});
   }
 
   if (getNbrVideoToAdd() == 0) {
@@ -356,6 +361,7 @@ $(document).ready(function() {
         _videos.push(videoId);
         $("#videos").append(html);
         $('.js-lazyYT').lazyYT();
+        $('.ytp-thumbnail').YouTubeModal({autoplay:true, width:640, height:480});
       }
       $('#inputVideo').val("");
       if (getNbrVideoToAdd() == 0) {

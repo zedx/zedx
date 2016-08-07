@@ -1,12 +1,62 @@
-.ad-title {
-    font-size: 2rem;
+.ad-price-label {
+    position: absolute;
+    z-index: 10;
+    height: 46px;
+    top: 20px;
+    right: 8px;
+    color: #fff;
+    font-size: 20px;
+    background: #f46d5b;
+    -webkit-border-radius: 3px 3px 0 3px;
+    -moz-border-radius: 3px 3px 0 3px;
+    border-radius: 3px 3px 0 3px;
+    line-height: 46px;
+    padding: 0 20px;
     font-weight: bold;
+}
+.ad-price-label:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 0;
+    top: 46px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: #a94437 transparent transparent #a94437
+}
+
+.ad-preview .ad-price-label {
+    top: 100px;
+}
+
+.ad-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.ad-photos {
+    margin-bottom: 20px;
+}
+
+.ad-videos {
+    margin-bottom: 20px;
+}
+
+.ad-details-header {
+    margin-bottom: 20px;
+}
+
+.ad-fields {
+    margin-bottom: 20px;
 }
 
 .ad-description {
     font-family: "OpenSans", sans-serif;
     /*white-space: pre;*/
     line-height: 20px;
+    font-size: 14px;
+    margin-bottom: 20px;
     white-space: pre-wrap;
     /* css-3 */
     white-space: -moz-pre-wrap;
@@ -20,6 +70,6 @@
 }
 
 .thumbnail img {
-    height: 100px;
-    width: 100px;
+    max-width: 100%;
+    max-height: 100px;
 }
