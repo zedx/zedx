@@ -37,8 +37,9 @@
     <!-- Page Content -->
     <div class="container">
         @yield('content')
-        @include('frontend::templates.partials.footer')
     </div>
+
+    @include('frontend::templates.partials.footer')
     <!-- /.container -->
 
     <script src="{{ public_asset(elixir_frontend('js/scripts.js')) }}"></script>
