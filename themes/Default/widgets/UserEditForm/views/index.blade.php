@@ -22,7 +22,7 @@
             <div class="caption">
               <div class="btn-group btn-group-justified" role="group">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-xs btn-primary btn-file btn-block"><i class="fa fa-picture-o"></i> <span class="text">{{ trans("frontend.user.profile.edit_avatar") }}</span> <input type="file" id="user-upload-avatar" name="avatar"></button>
+                  <div class="btn btn-xs btn-primary btn-file btn-block"><i class="fa fa-picture-o"></i> <span class="text">{{ trans("frontend.user.profile.edit_avatar") }}</span> <input type="file" id="user-upload-avatar" name="avatar"></div>
                 </div>
               </div>
             </div>
