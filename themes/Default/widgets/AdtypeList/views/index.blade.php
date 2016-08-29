@@ -40,7 +40,7 @@
 
         <td>@if ($adtype->nbr_days >= 9999) <span class="label label-success">{!! mb_strtoupper(trans('frontend.user.adtype.unlimited')) !!}</span> @elseif ($adtype->nbr_days == 0) <i class="fa fa-times-circle-o fa-lg text-danger"></i> @else <b><span class="text-info">{!! trans_choice('frontend.user.adtype.nbr_days', $adtype->nbr_days) !!}</span></b> @endif</td>
 
-        <td>@if ($numbers[$adtype->id] >= 9999) <span class="label label-success">{!! mb_strtoupper(trans('frontend.user.adtype.unlimited')) !!}</span> @elseif ($numbers[$adtype->id] <= 0) <b><span class="text-danger"> 0 </span></b> @else <b><span class="text-success">{{ $numbers[$adtype->id] }}</span></b> @endif</td>
+        <td>@if ($adtype->price == 0) <i class="fa fa-check-circle-o fa-lg text-success"></i> @elseif ($numbers[$adtype->id] >= 9999) <span class="label label-success">{!! mb_strtoupper(trans('frontend.user.adtype.unlimited')) !!}</span> @elseif ($numbers[$adtype->id] <= 0) <b><span class="text-danger"> 0 </span></b> @else <b><span class="text-success">{{ $numbers[$adtype->id] }}</span></b> @endif</td>
 
         <td>
         @if ($adtype->price > 0)
@@ -54,7 +54,7 @@
         @endif
         </td>
         <td>
-          @if ($numbers[$adtype->id] > 0)
+          @if ($numbers[$adtype->id] > 0 || $adtype->price == 0)
             <a href="{!! route('user.ad.create', $adtype->id) !!}" class="btn btn-success"><i class="fa fa-plus"></i> {!! trans('frontend.user.adtype.add') !!}</a>
           @else
             <a href="{{ route('user.adtype.cart', $adtype->id) }}" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> {!! trans('frontend.user.adtype.purchase') !!}</a>
