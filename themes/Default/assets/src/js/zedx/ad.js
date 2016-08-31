@@ -30,7 +30,14 @@ $(document).ready(function() {
       field.select[key].parentId = field.id;
       field.select[key].parentName = field.name;
       option.unit = field.unit;
-      option.selected = adFields.hasOwnProperty(field.id) && in_array(option.id, $.makeArray(adFields[field.id].value));
+
+      if (adFields.hasOwnProperty(field.id)) {
+        var values = isSearch ? adFields[field.id].value : adFields[field.id];
+        option.selected = in_array(option.id, $.makeArray(values));
+      }else{
+        option.selected = false;
+      }
+
       if (option.selected) {
         field.show = true;
       }
@@ -93,7 +100,7 @@ $(document).ready(function() {
           field._to = adFields[field.id].value.max;
         }
       }else{
-        var value = adFields[field.id].value;
+        var value = adFields[field.id];
         field.value = field.is_format ? formatNumber("#adFieldsTemplate_input", value) : value;
       }
     }
