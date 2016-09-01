@@ -619,14 +619,21 @@ $(document).ready(function() {
     e.preventDefault();
   });
 
+  $('#search-ads-order-by').change(function(e) {
+    $('#search-ads-us').find('.active').find('a').trigger('click');
+  });
+
   $(".zedx-search").on("click", function(e) {
     e.preventDefault();
+
     var $this = $(this),
         _tmp_path = $this.data("zedx-url-search"),
         _url = _tmp_path + "/" + construct_url() + "&us=",
         us = $this.data("zedx-us");
 
     _url += us !== undefined ? us : 'all';
+    _url += '&o=' + $("#search-ads-order-by").val();
+
     $(location).attr('href', _url);
   });
 
