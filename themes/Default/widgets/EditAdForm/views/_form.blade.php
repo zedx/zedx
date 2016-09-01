@@ -19,7 +19,7 @@
     {!! Form::label("category_id", trans("frontend.user.ad.category"), ['class' => 'label-text']) !!}
     <select class="select2 form-control" id="category_id" name="category_id">
       <option value="all">{!! trans("frontend.user.ad.choose_a_category") !!}</option>
-    @foreach (ZEDx\Models\Category::all() as $category)
+    @foreach (ZEDx\Models\Category::visible()->orderBy('lft', 'ASC')->get() as $category)
       <option value="{{ $category->id }}" {{ !$category->isLeaf() ? 'disabled' : '' }} data-category-api-url= "{{ route('zxajax.category.adFields', $category->id) }}" {{ old('category_id') == $category->id || !old('category_id') && $category->id == $ad->category_id ? 'selected': '' }}>
       {{ str_repeat('-', $category->depth) }} {{ $category->name }}</option>
     @endforeach
