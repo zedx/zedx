@@ -83,6 +83,9 @@
       var setHtmlEditor = function() {
         tinymce.init({
           selector: '#' + selector,
+          relative_urls : false,
+          remove_script_host : true,
+          document_base_url : "{{ url("") }}",
           plugins: [
             'advlist autolink lists link image charmap print preview hr anchor pagebreak',
             'searchreplace wordcount visualblocks visualchars code fullscreen',
