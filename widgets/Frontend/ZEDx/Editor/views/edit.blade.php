@@ -86,6 +86,7 @@
           relative_urls : false,
           remove_script_host : true,
           document_base_url : "{{ url("") }}",
+          language: 'fr_FR',
           plugins: [
             'advlist autolink lists link image charmap print preview hr anchor pagebreak',
             'searchreplace wordcount visualblocks visualchars code fullscreen',
