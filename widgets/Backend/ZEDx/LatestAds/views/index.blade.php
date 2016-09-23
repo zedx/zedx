@@ -10,7 +10,7 @@
     </div>
     <div class="product-info">
       <a href="{{ route('ad.preview', array($ad->id, str_slug($ad->content->title))) }}">{{ $ad->content->title }}
-        <span class="label label-warning pull-right">{{ ($price = $ad->price()) && isset($price->pivot) ? $price->pivot->value." ".getAdCurrency($ad, $price->unit) : ""  }}</span></a>
+        <span class="label label-warning pull-right">{{ ($price = $ad->price()) && isset($price->pivot) ? number_format($price->pivot->value, trans('backend.format.number.decimals') , trans('backend.format.number.dec_point'), trans('backend.format.number.thousands_sep'))." ".getAdCurrency($ad, $price->unit) : ""  }}</span></a>
           <span class="product-description">
             {{ str_limit(strip_tags($ad->content->body, 50)) }}
           </span>
