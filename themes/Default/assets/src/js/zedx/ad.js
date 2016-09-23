@@ -680,6 +680,16 @@ $(document).ready(function() {
 
             if (!responseText.error) {
                 $('#sendMailForm').clearForm();
+
+                $('#contactAction').modal('hide');
+
+                $.notify({
+                  icon: 'fa fa-check-square-o',
+                  message: response
+                },{
+                  type: 'success',
+                  delay: 2000,
+                });
             }
         },
         error: function() {
