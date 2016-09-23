@@ -93,6 +93,7 @@ $(document).ready(function() {
   var renderInput = function(field) {
     field.minmax = field.search !== null;
     field.input = true;
+    field.inputType = field.type == 4 ? 'number' : 'text';
     if (adFields.hasOwnProperty(field.id)) {
       if (isSearch) {
         if (field.minmax) {
