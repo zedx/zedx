@@ -43,7 +43,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">{!! trans('frontend.ad.contact.cancel') !!}</button>
-          <button type="submit" class="btn btn-success" id="confirm">{!! trans('frontend.ad.contact.send') !!}</button>
+          <button type="submit" class="btn btn-secondary" id="confirm">{!! trans('frontend.ad.contact.send') !!}</button>
         </div>
       </form>
     </div>

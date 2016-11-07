@@ -12,7 +12,7 @@
                 {!! trans('frontend.page.page_not_found_text') !!}
             </div>
             <div class="error-actions">
-                <a href="{{ url("") }}" class="btn btn-success"><i class="fa fa-home"></i> {!! trans('frontend.page.back_home') !!}</a>
+                <a href="{{ url("") }}" class="btn btn-secondary"><i class="fa fa-home"></i> {!! trans('frontend.page.back_home') !!}</a>
             </div>
         </div>
     </div>

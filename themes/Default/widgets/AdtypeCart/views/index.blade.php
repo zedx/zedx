@@ -19,13 +19,13 @@
         <h3>
         <div class="input-group number-spinner" data-unit-price="{{ $adtype->price }}">
           <span class="input-group-btn">
-            <a href="javascript:void(0)" class="btn btn-success" data-dir="dwn"><span class="fa fa-minus"></span></a>
+            <a href="javascript:void(0)" class="btn btn-secondary" data-dir="dwn"><span class="fa fa-minus"></span></a>
           </span>
 
           {!! Form::text('quantity', 1, ['class' => 'form-control text-center']) !!}
 
           <span class="input-group-btn">
-            <a href="javascript:void(0)" class="btn btn-success" data-dir="up"><span class="fa fa-plus"></span></a>
+            <a href="javascript:void(0)" class="btn btn-secondary" data-dir="up"><span class="fa fa-plus"></span></a>
           </span>
         </div>
         </h3>
@@ -60,7 +60,7 @@
   </div>
   <div class="panel-footer">
     <a href="{{ route('user.adtype.index') }}" class="pull-left btn btn-primary"><i class="fa fa-reply"></i> {!! trans('frontend.user.adtype.cart.cancel') !!}</a>
-    <button type="submit" class="pull-right btn btn-success"><i class="fa fa-shopping-cart"></i> {!! trans('frontend.user.adtype.cart.buy_now') !!}</button>
+    <button type="submit" class="pull-right btn btn-secondary"><i class="fa fa-shopping-cart"></i> {!! trans('frontend.user.adtype.cart.buy_now') !!}</button>
     <div class="clearfix"></div>
   </div>
 </div>

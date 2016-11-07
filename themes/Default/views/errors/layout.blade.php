@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link href="{{ public_asset(elixir_frontend('css/styles.css')) }}" rel="stylesheet" type="text/css" />
+    <link href="{{ public_asset('build/frontend/css/custom.css') }}" rel="stylesheet" type="text/css" />
     <link rel="apple-touch-icon" sizes="57x57" href="{{ public_asset('favicons/apple-touch-icon-57x57.png') }}">
     <link rel="apple-touch-icon" sizes="60x60" href="{{ public_asset('favicons/apple-touch-icon-60x60.png') }}">
     <link rel="apple-touch-icon" sizes="72x72" href="{{ public_asset('favicons/apple-touch-icon-72x72.png') }}">

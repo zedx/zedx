@@ -37,7 +37,7 @@
                     {!! Form::checkbox('remember', 1, null, ['id' => 'remember']) !!}
                     {!! Form::label("remember", trans("frontend.user.login.remember_me")) !!}
                 </div>
-                <button type="submit" class="btn btn-success btn-block">{!! trans('frontend.user.login.connection') !!}</button>
+                <button type="submit" class="btn btn-secondary btn-block">{!! trans('frontend.user.login.connection') !!}</button>
             {!! Form::close() !!}
             <div class="top-buffer pull-right"><a href="{{ route('auth.password.email') }}">{{ trans('frontend.user.login.forgot_my_password') }}</a></div>
 

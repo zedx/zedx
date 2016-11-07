@@ -40,11 +40,11 @@
         <td>@if ($subscription->price > 0) <h3>{{ number_format($subscription->price, 2 , trans('frontend.format.number.dec_point'), trans('frontend.format.number.thousands_sep')) }} {{ $currency }}</h3> @else <h3 class="text-success">{!! mb_strtoupper(trans('frontend.user.subscription.free')) !!}</h3> @endif</td>
         <td>
         @if ($subscription->price > 0)
-          <a href="{{ route('user.subscription.cart', $subscription->id) }}" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> {!! trans('frontend.user.subscription.purchase') !!}</a>
+          <a href="{{ route('user.subscription.cart', $subscription->id) }}" class="btn btn-secondary"><i class="fa fa-shopping-cart"></i> {!! trans('frontend.user.subscription.purchase') !!}</a>
         @else
 
           <span>
-            <a href="#" class="btn btn-success" data-url = '{{ route("user.subscription.swapForFree", [$subscription->id]) }}' data-toggle="modal" data-target="#confirmSubscribeAction" data-title="{{ $subscription->title }}" data-message="{!! trans('frontend.user.subscription.subscribe_confirmation') !!}"><i class="fa fa-check"></i> {!! trans("frontend.user.subscription.subscribe") !!}</a>
+            <a href="#" class="btn btn-primary" data-url = '{{ route("user.subscription.swapForFree", [$subscription->id]) }}' data-toggle="modal" data-target="#confirmSubscribeAction" data-title="{{ $subscription->title }}" data-message="{!! trans('frontend.user.subscription.subscribe_confirmation') !!}"><i class="fa fa-check"></i> {!! trans("frontend.user.subscription.subscribe") !!}</a>
           </span>
         @endif
         </td>

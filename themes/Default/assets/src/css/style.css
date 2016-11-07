@@ -28,7 +28,7 @@ body {
 /* Tabs panel */
 
 .tabbable-panel {
-    border: 1px solid #eee;
+    border-bottom: 1px solid #eee;
     padding: 10px;
 }
 
@@ -367,4 +367,55 @@ body {
 
 .nav-third-level > li > a:after, .nav-third-level > li > a:before {
     left: 40px;
+}
+
+.btn-secondary {
+  color: #ffffff !important;
+  background-color: #128f76 !important;
+  border-color: #11866f !important;
+}
+
+.label-secondary {
+  color: #ffffff !important;
+  background-color: #128f76 !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-secondary.active,
+.open .dropdown-toggle.btn-secondary {
+  color: #ffffff !important;
+  background-color: #128f76 !important;
+  border-color: #11866f !important;
+}
+
+.btn-secondary:active,
+.btn-secondary.active,
+.open .dropdown-toggle.btn-secondary {
+  background-image: none;
+}
+
+.btn-secondary.disabled,
+.btn-secondary[disabled],
+fieldset[disabled] .btn-secondary,
+.btn-secondary.disabled:hover,
+.btn-secondary[disabled]:hover,
+fieldset[disabled] .btn-secondary:hover,
+.btn-secondary.disabled:focus,
+.btn-secondary[disabled]:focus,
+fieldset[disabled] .btn-secondary:focus,
+.btn-secondary.disabled:active,
+.btn-secondary[disabled]:active,
+fieldset[disabled] .btn-secondary:active,
+.btn-secondary.disabled.active,
+.btn-secondary[disabled].active,
+fieldset[disabled] .btn-secondary.active {
+  background-color: #128f76 !important;
+  border-color: #11866f !important;
+}
+
+.btn-secondary .badge {
+  color: #128f76 !important;
+  background-color: #ffffff !important;
 }

@@ -55,7 +55,7 @@
         </td>
         <td>
           @if ($numbers[$adtype->id] > 0 || $adtype->price == 0)
-            <a href="{!! route('user.ad.create', $adtype->id) !!}" class="btn btn-success"><i class="fa fa-plus"></i> {!! trans('frontend.user.adtype.add') !!}</a>
+            <a href="{!! route('user.ad.create', $adtype->id) !!}" class="btn btn-secondary"><i class="fa fa-plus"></i> {!! trans('frontend.user.adtype.add') !!}</a>
           @else
             <a href="{{ route('user.adtype.cart', $adtype->id) }}" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> {!! trans('frontend.user.adtype.purchase') !!}</a>
           @endif

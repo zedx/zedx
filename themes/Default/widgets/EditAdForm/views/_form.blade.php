@@ -74,7 +74,7 @@
     <div id="form-add-video" class="input-group input-group-sm">
       <input type="text" id="inputVideo" class="form-control" placeholder="https://www.youtube.com/watch?v=ujn7jEQ4ib4" />
       <span class="input-group-btn">
-        <button id="add_video" class="btn btn-success" type="button">{!! trans('frontend.user.ad.add_video') !!}</button>
+        <button id="add_video" class="btn btn-secondary" type="button">{!! trans('frontend.user.ad.add_video') !!}</button>
       </span>
     </div><!-- /input-group -->
     @else
