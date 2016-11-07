@@ -60,13 +60,30 @@
                 {{ Auth::user()->name }} <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-                <li><a href="{{ route('user.index') }}"><i class="fa fa-user"></i> {{ trans('frontend.user.account.my_account') }}</a></li>
-                <li class="divider"></li>
-                <li>
-                    <a href="{{ route('user.logout') }}" >
-                        <i class="fa fa-sign-out"></i> {{ trans('frontend.user.account.logout') }}
-                    </a>
-                </li>
+                {!! renderMenu('user-header', [
+                    "parent" => [
+                        'li' => [
+                            'withoutChildren' => 'class="{active}"',
+                            'withChildren' => '',
+                        ],
+                        'link' => [
+                            'withoutChildren' => '',
+                            'withChildren' => 'role="button" data-toggle="dropdown" data-target="#"',
+                        ],
+                        'ul' => 'class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu"',
+                    ],
+                    "children" => [
+                        'li' => [
+                            'withoutChildren' => '',
+                            'withChildren' => 'class="dropdown-submenu"',
+                        ],
+                        'link' => [
+                            'withoutChildren' => 'tabindex="-1"',
+                            'withChildren' => '',
+                        ],
+                        'ul' => 'class="dropdown-menu"',
+                    ],
+                ]) !!}
             </ul>
         </li>
         @endif
