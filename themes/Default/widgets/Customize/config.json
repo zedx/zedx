@@ -1,0 +1,45 @@
+{
+    "general": {
+        "background_color": "#e7ebf2",
+        "font_size": "13px",
+        "font_color": "#2c3e50",
+        "link_color": "#18bc9c",
+        "link_active_color": "#18bc9c"
+    },
+    "navigation": {
+        "background_color" : "#2c3e50",
+        "background_active_color" : "transparent",
+        "font_color" : "#ffffff",
+        "font_active_color" : "#18bc9c"
+    },
+    "footer": {
+        "above_background_color": "#2c3e50",
+        "above_link_color": "#ffffff",
+        "above_link_active_color": "#ffffff",
+        "below_background_color": "#233140",
+        "below_font_color": "#ffffff"
+    },
+    "buttons": {
+        "primary": {
+            "font_color": "#ffffff",
+            "background_color": "#2c3e50",
+            "border_color": "#2c3e50",
+            "background_active_color": "#1a242f"
+        },
+        "secondary": {
+            "font_color": "#ffffff",
+            "background_color": "#128f76",
+            "border_color": "#11866f",
+            "background_active_color": "#128f76"
+        }
+    },
+    "forms": {
+        "font_color": "#2c3e50",
+        "border_color": "#dce4ec",
+        "border_active_color": "#2c3e50",
+        "placeholder_color": "#acb6c0"
+    },
+    "block": {},
+    "css": "",
+    "js": ""
+}

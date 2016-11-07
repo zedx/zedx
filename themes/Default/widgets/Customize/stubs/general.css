@@ -1,0 +1,13 @@
+body {
+    background: @@background_color!important;
+    font-size: @@font_size!important;
+    color: @@font_color!important;
+}
+
+a {
+    color: @@link_color!important;
+}
+
+a:hover, a:focus {
+    color: @@link_active_color!important;
+}
