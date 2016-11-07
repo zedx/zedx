@@ -2,9 +2,9 @@
 
 namespace ZEDx\Widgets\Frontend\Theme\Customize;
 
-use ZEDx\Components\Widget as BaseWidget;
 use File;
 use Themes;
+use ZEDx\Components\Widget as BaseWidget;
 use ZEDx\Support\Json;
 
 class Widget extends BaseWidget
@@ -39,7 +39,7 @@ class Widget extends BaseWidget
     }
 
     /**
-     * Get the setting page
+     * Get the setting page.
      *
      * @param Request $request
      *
@@ -58,14 +58,14 @@ class Widget extends BaseWidget
     protected function getJson()
     {
         $path = storage_path('app/themes');
-        $pathFile = $path . '/' . Themes::getActive() . '.json';
+        $pathFile = $path.'/'.Themes::getActive().'.json';
 
         if (!File::exists($path)) {
             File::makeDirectory($path, 0777, true);
         }
 
         if (!File::exists($pathFile)) {
-            File::copy(base_path('themes/' . Themes::getActive() . '/widgets/Customize/config.json'), $pathFile);
+            File::copy(base_path('themes/'.Themes::getActive().'/widgets/Customize/config.json'), $pathFile);
         }
 
         return new Json($pathFile);
@@ -82,7 +82,7 @@ class Widget extends BaseWidget
     protected function generateCss($inputs)
     {
         $content = '';
-        $stubsPath = base_path('themes/' . Themes::getActive() . '/widgets/Customize/stubs');
+        $stubsPath = base_path('themes/'.Themes::getActive().'/widgets/Customize/stubs');
         $stubs = File::glob("{$stubsPath}/*.css");
         foreach ($stubs as $stub) {
             $name = basename($stub, '.css');
