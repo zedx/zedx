@@ -74,7 +74,7 @@
               <button class="btn btn-default btn-circle dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-wrench"></i></button>
               <ul class="dropdown-menu">
                 @if ($ad->adtype->can_edit)
-                <li><a href="{{ route('user.ad.edit', $ad->id) }}" class="btn btn-primary btn-xs"><i class="fa fa-edit"> {!! trans('frontend.user.ad.edit') !!}</i></a></li>
+                <li><a href="{{ route('user.ad.edit', $ad->id) }}"><i class="fa fa-edit"> {!! trans('frontend.user.ad.edit') !!}</i></a></li>
                 <li class="divider"></li>
                 @endif
                 <li><a href="#" data-url = '{{ route("user.ad.destroy", [$ad->id]) }}' data-toggle="modal" data-target="#confirmDeleteAction" data-title="{{ $ad->content->title }}" data-message="{!! trans('frontend.user.ad.delete_ad_confirmation') !!}"><i class="fa fa-trash"> {!! trans('frontend.user.ad.delete') !!}</i></a></li>
