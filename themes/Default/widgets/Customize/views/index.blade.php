@@ -5,12 +5,11 @@
             <div class="col-md-7">
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs">
-                      <li class="active"><a href="#customize-general" data-toggle="tab" aria-expanded="true">Général</a></li>
-                      <li><a href="#customize-navbar" data-toggle="tab" aria-expanded="false">Navigation</a></li>
-                      <li><a href="#customize-footer" data-toggle="tab" aria-expanded="false">Bas de page</a></li>
-                      <li><a href="#customize-buttons" data-toggle="tab" aria-expanded="false">Boutons</a></li>
-                      <li><a href="#customize-forms" data-toggle="tab" aria-expanded="true">Formulaires</a></li>
-                      <li><a href="#customize-blocks" data-toggle="tab" aria-expanded="true">Blocs</a></li>
+                      <li class="active"><a href="#customize-general" data-toggle="tab" aria-expanded="true">{!! trans('backend.customize_theme.general.general') !!}</a></li>
+                      <li><a href="#customize-navbar" data-toggle="tab" aria-expanded="false">{!! trans('backend.customize_theme.navbar.navigation') !!}</a></li>
+                      <li><a href="#customize-footer" data-toggle="tab" aria-expanded="false">{!! trans('backend.customize_theme.footer.footer') !!}</a></li>
+                      <li><a href="#customize-buttons" data-toggle="tab" aria-expanded="false">{!! trans('backend.customize_theme.buttons.buttons') !!}</a></li>
+                      <li><a href="#customize-forms" data-toggle="tab" aria-expanded="true">{!! trans('backend.customize_theme.forms.forms') !!}</a></li>
                     </ul>
                     <div class="tab-content">
                       <div class="tab-pane active" id="customize-general">
@@ -27,9 +26,6 @@
                       </div>
                       <div class="tab-pane" id="customize-forms">
                         @include('widget_frontend_theme_customize::partials.forms')
-                      </div>
-                      <div class="tab-pane" id="customize-blocks">
-
                       </div>
                     </div>
                     <!-- /.tab-content -->
