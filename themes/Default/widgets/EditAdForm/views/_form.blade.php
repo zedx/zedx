@@ -1,7 +1,7 @@
 <div class="panel-body">
   <div class="form-group {{ $errors->has('content.title') ? 'has-error' : ''}}">
     {!! Form::label("content[title]", trans("frontend.user.ad.ad_title"), ['class' => 'label-text']) !!}
-    {!! Form::text("content[title]", null, ['class' => 'form-control', 'placeholder' => 'Ex : Lamborghini egoista V10 600 hp']) !!}
+    {!! Form::text("content[title]", null, ['class' => 'form-control']) !!}
     {!! $errors->first('content.title', '<p class="help-block">:message</p>') !!}
   </div>
   <div class="form-group">
@@ -30,7 +30,7 @@
   @include('widget_frontend_theme_editadform::_partials.fields')
   <div class="form-group {{ $errors->has('content.body') ? 'has-error' : ''}}">
     {!! Form::label("content[body]", trans('frontend.user.ad.description'), ['class' => 'label-text']) !!}
-    {!! Form::textarea("content[body]", null, ['class' => 'form-control wysihtml5', 'placeholder' => 'Ex : Lamborghini egoista V10 600 hp']) !!}
+    {!! Form::textarea("content[body]", null, ['class' => 'form-control wysihtml5']) !!}
     {!! $errors->first('content.body', '<p class="help-block">:message</p>') !!}
   </div>
   <div class="form-group">
