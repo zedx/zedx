@@ -44,7 +44,7 @@ return [
         ],
         'forms'         => [
             'forms'               => 'Forms',
-            'inputs'              => "Inputs",
+            'inputs'              => 'Inputs',
             'border_color'        => 'Border',
             'border_active_color' => 'Active border',
             'font_color'          => 'Text',
