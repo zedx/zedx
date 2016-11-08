@@ -22,17 +22,17 @@
 <div class="row">
   <div class="col-md-4">
     <label class="radio-inline">
-      <input type="radio" class="zedx-editor-widget-type" name="config[type]" value="none" @if($type == "none") checked @endif> Without Editor
+      <input type="radio" class="zedx-editor-widget-type" name="config[type]" value="none" @if($type == "none") checked @endif> Sans Editeur
     </label>
   </div>
   <div class="col-md-4">
     <label class="radio-inline">
-      <input type="radio" class="zedx-editor-widget-type" name="config[type]" value="code" @if($type == "code") checked @endif> Code Editor
+      <input type="radio" class="zedx-editor-widget-type" name="config[type]" value="code" @if($type == "code") checked @endif> Éditeur de Code
     </label>
   </div>
   <div class="col-md-4">
     <label class="radio-inline">
-      <input type="radio" class="zedx-editor-widget-type" name="config[type]" value="html" @if($type == "html") checked @endif> Html Editor
+      <input type="radio" class="zedx-editor-widget-type" name="config[type]" value="html" @if($type == "html") checked @endif> Editeur Html
     </label>
   </div>
 </div>
@@ -41,6 +41,15 @@
 
 <textarea id="zedx-editor-widget-content" style="width:100%" rows="15" name="config[content]">{{ $content }}</textarea>
 <hr>
+<div class="form-group">
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" name="config[is_panel]" @if($is_panel) checked @endif>
+      Afficher le contenu dans un panneau
+    </label>
+  </div>
+
+</div>
 <button type="submit" class="btn btn-primary pull-right"><i class="fa fa-save"></i> Enregistrer</button>
 
 {!! Form::close() !!}
