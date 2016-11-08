@@ -156,11 +156,18 @@ $(document).ready(function() {
   });
 
   if (!isAdShow) {
-    $("#category_id").trigger("change");
+    var firstCategory = $('#fist_category_id');
+
+    if (firstCategory.length) {
+      updateFields(firstCategory.data("category-api-url"));
+    }else{
+      $("#category_id").trigger("change");
+    }
   }else{
     var url = $adFields.data("category-api-url");
     updateFields(url);
   }
+
   /*
   $('.summernote').summernote({
     onkeyup: function(e) {

@@ -15,6 +15,10 @@
         </span>
     </div><!-- /input-group -->
   </div>
+  @if (ZEDx\Models\Category::count() == 1)
+  {{--*/ $category = ZEDx\Models\Category::first(); /*--}}
+  <input type="hidden" class="zedx-listen-search" id="fist_category_id" data-zedx-type="category" name="category_id" value="{{ $category->id }}" data-category-api-url= "{{ route('zxajax.category.searchFields', $category->id) }}">
+  @else
   <div class="form-group {{ $errors->has('category_id') ? 'has-error' : ''}}">
     {!! Form::label("category_id", trans("frontend.user.ad.category"), ['class' => 'label-text']) !!}
     <select class="select2 form-control" id="category_id" name="category_id">
@@ -26,7 +30,7 @@
     </select>
     {!! $errors->first('category_id', '<p class="help-block">:message</p>') !!}
   </div>
-
+  @endif
   @include('widget_frontend_theme_editadform::_partials.fields')
   <div class="form-group {{ $errors->has('content.body') ? 'has-error' : ''}}">
     {!! Form::label("content[body]", trans('frontend.user.ad.description'), ['class' => 'label-text']) !!}
