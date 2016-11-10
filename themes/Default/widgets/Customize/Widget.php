@@ -77,6 +77,7 @@ class Widget extends BaseWidget
         $this->getJson()->update($inputs);
 
         @File::put(public_path('build/frontend/css/custom.css'), $this->generateCss($inputs));
+        @File::put(public_path('build/frontend/js/custom.js'), $inputs['js']);
     }
 
     protected function generateCss($inputs)

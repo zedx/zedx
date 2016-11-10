@@ -7,6 +7,11 @@ return [
             'customize_styles_help' => 'Customize your website appearance by adding your own CSS code to be applied on top of ZEDx default styles.',
             'edit_style'            => 'Edit Custom CSS',
         ],
+        'javascript'    => [
+            'customize_javascript'      => 'Custom Javascript',
+            'customize_javascript_help' => 'Customize your website javascript by adding your own JS code to be applied on ZEDx.',
+            'edit_javascript'           => 'Edit Custom Js',
+        ],
         'general'       => [
             'general'           => 'General',
             'body'              => 'Body',

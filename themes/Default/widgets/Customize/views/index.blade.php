@@ -32,11 +32,24 @@
                 </div>
             </div>
             <div class="col-md-5">
-                <fieldset>
-                    <legend>{!! trans('backend.customize_theme.style.customize_styles') !!}</legend>
-                    <p><small>{!! trans('backend.customize_theme.style.customize_styles_help') !!}</small></p>
-                    <center><a href="#" class='btn btn-info' data-toggle="modal" data-target="#customizeCssAction"><i class="fa fa-paint-brush"></i> {!! trans('backend.customize_theme.style.edit_style') !!}</a></center>
-                </fieldset>
+              <div class="row">
+                <div class="col-md-12">
+                  <fieldset>
+                      <legend>{!! trans('backend.customize_theme.style.customize_styles') !!}</legend>
+                      <p><small>{!! trans('backend.customize_theme.style.customize_styles_help') !!}</small></p>
+                      <center><a href="#" class='btn btn-info' data-toggle="modal" data-target="#customizeCssAction"><i class="fa fa-paint-brush"></i> {!! trans('backend.customize_theme.style.edit_style') !!}</a></center>
+                  </fieldset>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12">
+                  <fieldset>
+                      <legend>{!! trans('backend.customize_theme.javascript.customize_javascript') !!}</legend>
+                      <p><small>{!! trans('backend.customize_theme.javascript.customize_javascript_help') !!}</small></p>
+                      <center><a href="#" class='btn btn-info' data-toggle="modal" data-target="#customizeJsAction"><i class="fa fa-paint-brush"></i> {!! trans('backend.customize_theme.javascript.edit_javascript') !!}</a></center>
+                  </fieldset>
+                </div>
             </div>
         </div>
     </div>
@@ -46,4 +59,5 @@
 </div>
 
 @include('widget_frontend_theme_customize::partials.custom_css')
+@include('widget_frontend_theme_customize::partials.custom_js')
 {!! Form::close() !!}

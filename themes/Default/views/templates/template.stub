@@ -44,6 +44,7 @@
     <script src="{{ public_asset(elixir_frontend('js/scripts.js')) }}"></script>
     @yield('script')
     {!! setting()->website_tracking_code !!}
+    <script src="{{ public_asset('build/frontend/js/custom.js') }}"></script>
 </body>
 
 </html>

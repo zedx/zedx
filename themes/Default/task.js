@@ -73,6 +73,7 @@ module.exports = function (elixir, fs) {
 
             /* Copy Frontend Assets */
             .copy(_root + "css/custom.css", "public/build/frontend/css/")
+            .copy(_root + "js/custom.js", "public/build/frontend/js/")
             .copy(_root + "img/", "public/build/frontend/img/")
             .copy(_root + "libs/font-awesome/fonts/", "public/build/frontend/fonts/")
             .copy(_root + "libs/select2/select2.png", "public/build/frontend/css/")
