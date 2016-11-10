@@ -8,9 +8,9 @@
     },
     "navigation": {
         "background_color" : "#2c3e50",
-        "background_active_color" : "transparent",
+        "background_active_color" : "#18bc9c",
         "font_color" : "#ffffff",
-        "font_active_color" : "#18bc9c"
+        "font_active_color" : "#ffffff"
     },
     "footer": {
         "above_background_color": "#2c3e50",
