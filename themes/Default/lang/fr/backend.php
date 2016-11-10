@@ -9,7 +9,7 @@ return [
         ],
         'javascript'    => [
             'customize_javascript'      => 'Personnaliser le javascript',
-            'customize_javascript_help' => "Personnalisez le javascript en ajoutant votre propre code JS qui sera appliqué directement dans votre site ZEDx.",
+            'customize_javascript_help' => 'Personnalisez le javascript en ajoutant votre propre code JS qui sera appliqué directement dans votre site ZEDx.',
             'edit_javascript'           => 'Éditer le Js personnalisé',
         ],
         'general'       => [
