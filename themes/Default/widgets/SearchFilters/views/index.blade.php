@@ -20,6 +20,10 @@
         </span>
       </div><!-- /input-group -->
       </div>
+      @if (ZEDx\Models\Category::count() == 1)
+      {{--*/ $category = ZEDx\Models\Category::first(); /*--}}
+      <input type="hidden" class="zedx-listen-search" id="fist_category_id" data-zedx-type="category" name="category_id" value="{{ $category->id }}" data-category-api-url= "{{ route('zxajax.category.searchFields', $category->id) }}">
+      @else
       <div class="form-group">
         {!! Form::label("category_id", trans("frontend.ad.search.category"), ['class' => 'label-text']) !!}
         <select class="select2 form-control zedx-listen-search" id="category_id" data-zedx-type="category" name="category_id">
@@ -30,6 +34,7 @@
         @endforeach
         </select>
       </div>
+      @endif
       <div id="adFields" data-fields="{{ isset($fields) ? json_encode($fields) : "" }}" data-type = "search"></div>
       <script type="x-tmpl-mustache" id="adFieldsTemplate_multiple">
       <div class="form-group">

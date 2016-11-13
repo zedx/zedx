@@ -16,7 +16,7 @@
   </li>
   <li class="list-group-item text-center">
   @if ($ad->user->is_phone)
-    <a href="javascript:void(0)" class="btn btn-md btn-success btn-block" id="showPhoneNumber" data-url='{{ route("ad.phone", [$ad->id]) }}'>
+    <a href="javascript:void(0)" class="btn btn-md btn-secondary btn-block" id="showPhoneNumber" data-url='{{ route("ad.phone", [$ad->id]) }}'>
       <i class="fa fa-phone pull-left"></i> {!! trans('frontend.ad.show_phone_number') !!}
     </a>
   @endif

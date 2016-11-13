@@ -31,16 +31,18 @@ class Widget extends BaseWidget
     public function run()
     {
         return view('widget_frontend_zedx_editor::index', [
-            'content' => array_get($this->config, 'content'),
+            'content'  => array_get($this->config, 'content'),
+            'is_panel' => array_get($this->config, 'is_panel'),
         ]);
     }
 
     public function setting($url)
     {
         return view('widget_frontend_zedx_editor::edit', [
-            'content' => array_get($this->config, 'content'),
-            'type'    => array_get($this->config, 'type'),
-            'url'     => $url,
+            'content'  => array_get($this->config, 'content'),
+            'type'     => array_get($this->config, 'type'),
+            'is_panel' => array_get($this->config, 'is_panel'),
+            'url'      => $url,
         ]);
     }
 }

@@ -1,0 +1,128 @@
+.form-control {
+    color:@@font_color;
+    border-color: @@border_color;
+}
+
+.form-control:focus {
+    border-color: @@border_active_color;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: @@placeholder_color;
+}
+
+.form-control:-moz-placeholder {
+    color: @@placeholder_color;
+}
+
+.form-control::-moz-placeholder {
+    color: @@placeholder_color;
+}
+
+.form-control:-ms-input-placeholder {
+    color: @@placeholder_color;
+}
+
+
+
+
+/**/
+
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+    background: @@border_active_color !important;
+}
+.select2-container--default .select2-results__option[aria-selected=true]{
+    background: @@border_active_color;
+    color: #fff;
+}
+.select2-container .select2-choice {
+    border: 2px solid @@border_color;
+}
+
+.has-error .select2-container .select2-choice {
+    border: 2px solid #e74c3c;
+}
+
+.select2-container.select2-drop-above .select2-choice {
+    border-bottom-color: @@border_color;
+}
+.select2-drop {
+    border: 2px solid @@border_active_color;
+}
+.select2-drop.select2-drop-above {
+    border-top: 2px solid @@border_color;
+}
+.select2-container .select2-choice div {
+    border-left: 2px solid @@border_color;
+}
+
+.select2-search input {
+    border: 2px solid @@border_active_color;
+}
+.select2-chosen {
+    color: @@font_color;
+}
+.select2-default .select2-chosen {
+    color: @@placeholder_color;
+}
+.select2-container-active .select2-choice,
+.select2-container-active .select2-choices {
+    border: 2px solid @@border_active_color;
+}
+
+.select2-results .select2-highlighted {
+    background: @@border_active_color;
+}
+
+.select2-container-multi .select2-choices {
+    border: 2px solid @@border_color;
+}
+.select2-container-multi.select2-container-active .select2-choices {
+    border: 2px solid @@border_color;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover{
+    color: @@border_active_color;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove{
+    color: @@border_active_color;
+}
+
+.select2-container--default .select2-selection--multiple,.select2-container--default.select2-container--focus .select2-selection--multiple{
+    border: 1px solid @@border_active_color;
+}
+
+.select2-result-label {
+    color:@@font_color;
+}
+
+.checkbox-primary input[type="checkbox"]:indeterminate + label::before, .checkbox-primary input[type="radio"]:indeterminate + label::before {
+    background-color: @@border_active_color;
+    border-color: @@border_active_color;
+}
+
+.checkbox-primary input[type="checkbox"]:checked + label::before, .checkbox-primary input[type="radio"]:checked + label::before {
+    background-color: @@border_active_color;
+    border-color: @@border_active_color;
+}
+
+.checkbox label::before {
+    border: 1px solid @@border_color;
+}
+
+.radio-primary input[type="radio"] + label::after {
+    background-color: @@border_active_color;
+}
+
+.radio-primary input[type="radio"]:checked + label::before {
+    border-color: @@border_active_color;
+}
+
+.radio-primary input[type="radio"]:checked + label::after {
+    background-color: @@border_active_color;
+}
+
+.radio label::before {
+    border: 1px solid @@border_color;
+}

@@ -29,6 +29,7 @@ module.exports = function (elixir, fs) {
             'libs/jquery-form/jquery.form.js',
             'libs/metisMenu/metisMenu.min.js',
             'libs/jquery.bxslider/jquery.bxslider.min.js',
+            'libs/bootstrap-notify/bootstrap-notify.min.js',
             'js/reverseTable.js',
             'js/config.js',
             'js/zedx/ad.js',
@@ -55,6 +56,7 @@ module.exports = function (elixir, fs) {
                 'libs/lazyYT/lazyYT.css',
                 'libs/flag-icon-css/css/flag-icon.min.css',
                 'libs/jquery.bxslider/jquery.bxslider.css',
+                'libs/animate/animate.css',
                 'css/bxslider-override.css',
                 'css/social-icons.css',
                 'css/select2-flatui.css',
@@ -70,7 +72,8 @@ module.exports = function (elixir, fs) {
             ], 'public/frontend/css/styles.css', _root)
 
             /* Copy Frontend Assets */
-
+            .copy(_root + "css/custom.css", "public/build/frontend/css/")
+            .copy(_root + "js/custom.js", "public/build/frontend/js/")
             .copy(_root + "img/", "public/build/frontend/img/")
             .copy(_root + "libs/font-awesome/fonts/", "public/build/frontend/fonts/")
             .copy(_root + "libs/select2/select2.png", "public/build/frontend/css/")

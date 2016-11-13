@@ -1,6 +1,6 @@
 <templates>
   <template identifier="content" title="content page" partials="header,footer">
-   <row>
+   <row class="row">
     <col grid="12">
      <block identifier="content" title="Block content" />
     </col>
@@ -8,12 +8,12 @@
   </template>
 
   <template identifier="search" title="Search page" partials="header,footer">
-   <row>
+   <row class="row">
     <col grid="12">
      <block identifier="query" title="Block query" />
     </col>
    </row>
-   <row>
+   <row class="row">
     <col grid="4">
      <block identifier="filters" title="Block filters" />
     </col>
@@ -24,12 +24,12 @@
   </template>
 
   <template identifier="ad" title="Ad page" partials="header,footer">
-   <row>
+   <row class="row">
     <col grid="12">
      <block identifier="categories" title="Categories list" />
     </col>
    </row>
-   <row>
+   <row class="row">
     <col grid="8">
      <block identifier="content" title="Ad content" />
     </col>
@@ -40,7 +40,7 @@
   </template>
 
   <template identifier="user" title="User page" partials="header,footer">
-   <row>
+   <row class="row">
     <col grid="3">
      <block identifier="menu" title="Menu side" />
     </col>
@@ -51,7 +51,7 @@
   </template>
 
   <template identifier="simple" title="Simple Page" partials="header,footer">
-   <row>
+   <row class="row">
     <col grid="2">
      <block identifier="sideleft" title="Left side" />
     </col>

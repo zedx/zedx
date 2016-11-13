@@ -30,7 +30,14 @@ $(document).ready(function() {
       field.select[key].parentId = field.id;
       field.select[key].parentName = field.name;
       option.unit = field.unit;
-      option.selected = adFields.hasOwnProperty(field.id) && in_array(option.id, $.makeArray(adFields[field.id].value));
+
+      if (adFields.hasOwnProperty(field.id)) {
+        var values = isSearch ? adFields[field.id].value : adFields[field.id];
+        option.selected = in_array(option.id, $.makeArray(values));
+      }else{
+        option.selected = false;
+      }
+
       if (option.selected) {
         field.show = true;
       }
@@ -86,6 +93,7 @@ $(document).ready(function() {
   var renderInput = function(field) {
     field.minmax = field.search !== null;
     field.input = true;
+    field.inputType = field.type == 4 ? 'number' : 'text';
     if (adFields.hasOwnProperty(field.id)) {
       if (isSearch) {
         if (field.minmax) {
@@ -93,7 +101,7 @@ $(document).ready(function() {
           field._to = adFields[field.id].value.max;
         }
       }else{
-        var value = adFields[field.id].value;
+        var value = adFields[field.id];
         field.value = field.is_format ? formatNumber("#adFieldsTemplate_input", value) : value;
       }
     }
@@ -148,11 +156,18 @@ $(document).ready(function() {
   });
 
   if (!isAdShow) {
-    $("#category_id").trigger("change");
+    var firstCategory = $('#fist_category_id');
+
+    if (firstCategory.length) {
+      updateFields(firstCategory.data("category-api-url"));
+    }else{
+      $("#category_id").trigger("change");
+    }
   }else{
     var url = $adFields.data("category-api-url");
     updateFields(url);
   }
+
   /*
   $('.summernote').summernote({
     onkeyup: function(e) {
@@ -612,14 +627,21 @@ $(document).ready(function() {
     e.preventDefault();
   });
 
+  $('#search-ads-order-by').change(function(e) {
+    $('#search-ads-us').find('.active').find('a').trigger('click');
+  });
+
   $(".zedx-search").on("click", function(e) {
     e.preventDefault();
+
     var $this = $(this),
         _tmp_path = $this.data("zedx-url-search"),
         _url = _tmp_path + "/" + construct_url() + "&us=",
         us = $this.data("zedx-us");
 
     _url += us !== undefined ? us : 'all';
+    _url += '&o=' + $("#search-ads-order-by").val();
+
     $(location).attr('href', _url);
   });
 
@@ -665,6 +687,16 @@ $(document).ready(function() {
 
             if (!responseText.error) {
                 $('#sendMailForm').clearForm();
+
+                $('#contactAction').modal('hide');
+
+                $.notify({
+                  icon: 'fa fa-check-square-o',
+                  message: response
+                },{
+                  type: 'success',
+                  delay: 2000,
+                });
             }
         },
         error: function() {

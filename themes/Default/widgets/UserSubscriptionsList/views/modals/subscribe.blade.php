@@ -11,7 +11,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">{!! trans('frontend.user.subscription.cancel') !!}</button>
-        <button type="button" class="btn btn-success" data-dismiss="modal" id="confirm">{!!trans('frontend.user.subscription.subscribe') !!}</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="confirm">{!!trans('frontend.user.subscription.subscribe') !!}</button>
       </div>
     </div>
   </div>

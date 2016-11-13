@@ -1,7 +1,7 @@
 <div class="panel-body">
   <div class="form-group {{ $errors->has('content.title') ? 'has-error' : ''}}">
     {!! Form::label("content[title]", trans("frontend.user.ad.ad_title"), ['class' => 'label-text']) !!}
-    {!! Form::text("content[title]", null, ['class' => 'form-control', 'placeholder' => 'Ex : Lamborghini egoista V10 600 hp']) !!}
+    {!! Form::text("content[title]", null, ['class' => 'form-control']) !!}
     {!! $errors->first('content.title', '<p class="help-block">:message</p>') !!}
   </div>
   <div class="form-group">
@@ -15,22 +15,26 @@
         </span>
     </div><!-- /input-group -->
   </div>
+  @if (ZEDx\Models\Category::count() == 1)
+  {{--*/ $category = ZEDx\Models\Category::first(); /*--}}
+  <input type="hidden" class="zedx-listen-search" id="fist_category_id" data-zedx-type="category" name="category_id" value="{{ $category->id }}" data-category-api-url= "{{ route('zxajax.category.searchFields', $category->id) }}">
+  @else
   <div class="form-group {{ $errors->has('category_id') ? 'has-error' : ''}}">
     {!! Form::label("category_id", trans("frontend.user.ad.category"), ['class' => 'label-text']) !!}
     <select class="select2 form-control" id="category_id" name="category_id">
       <option value="all">{!! trans("frontend.user.ad.choose_a_category") !!}</option>
-    @foreach (ZEDx\Models\Category::all() as $category)
+    @foreach (ZEDx\Models\Category::visible()->orderBy('lft', 'ASC')->get() as $category)
       <option value="{{ $category->id }}" {{ !$category->isLeaf() ? 'disabled' : '' }} data-category-api-url= "{{ route('zxajax.category.adFields', $category->id) }}" {{ old('category_id') == $category->id || !old('category_id') && $category->id == $ad->category_id ? 'selected': '' }}>
       {{ str_repeat('-', $category->depth) }} {{ $category->name }}</option>
     @endforeach
     </select>
     {!! $errors->first('category_id', '<p class="help-block">:message</p>') !!}
   </div>
-
+  @endif
   @include('widget_frontend_theme_editadform::_partials.fields')
   <div class="form-group {{ $errors->has('content.body') ? 'has-error' : ''}}">
     {!! Form::label("content[body]", trans('frontend.user.ad.description'), ['class' => 'label-text']) !!}
-    {!! Form::textarea("content[body]", null, ['class' => 'form-control wysihtml5', 'placeholder' => 'Ex : Lamborghini egoista V10 600 hp']) !!}
+    {!! Form::textarea("content[body]", null, ['class' => 'form-control wysihtml5']) !!}
     {!! $errors->first('content.body', '<p class="help-block">:message</p>') !!}
   </div>
   <div class="form-group">
@@ -74,7 +78,7 @@
     <div id="form-add-video" class="input-group input-group-sm">
       <input type="text" id="inputVideo" class="form-control" placeholder="https://www.youtube.com/watch?v=ujn7jEQ4ib4" />
       <span class="input-group-btn">
-        <button id="add_video" class="btn btn-success" type="button">{!! trans('frontend.user.ad.add_video') !!}</button>
+        <button id="add_video" class="btn btn-secondary" type="button">{!! trans('frontend.user.ad.add_video') !!}</button>
       </span>
     </div><!-- /input-group -->
     @else

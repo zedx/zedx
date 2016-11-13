@@ -73,3 +73,11 @@
     max-width: 100%;
     max-height: 100px;
 }
+
+.ad-setting {
+    display: none;
+}
+
+.ad-details:hover .ad-setting {
+    display: block;
+}

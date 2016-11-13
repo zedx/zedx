@@ -1,0 +1,16 @@
+footer .footer-above {
+    background-color: @@above_background_color;
+}
+
+footer .footer-above a {
+    color: @@above_link_color!important;
+}
+
+footer .footer-above a:hover, footer .footer-above a:focus {
+    color: @@above_link_active_color!important;
+}
+
+footer .footer-below {
+    background-color: @@below_background_color;
+    color:@@below_font_color;
+}

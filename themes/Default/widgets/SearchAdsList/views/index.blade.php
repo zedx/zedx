@@ -1,7 +1,14 @@
 <div class="panel panel-default">
   <div class="tabbable-panel">
     <div class="tabbable-line tabs-below">
-    <ul class="nav nav-tabs">
+    <div class="pull-right">
+      <select id="search-ads-order-by" class="form-control input-sm" name="o">
+        <option {{ Request::get('o') == '0' ? 'selected' : '' }} value="0">{{ trans('frontend.ad.search.order_by_date') }}</option>
+        <option {{ Request::get('o') == '1' ? 'selected' : '' }} value="1">{{ trans('frontend.ad.search.order_by_asc_price') }}</option>
+        <option {{ Request::get('o') == '2' ? 'selected' : '' }} value="2">{{ trans('frontend.ad.search.order_by_desc_price') }}</option>
+      </select>
+    </div>
+    <ul class="nav nav-tabs" id="search-ads-us">
         <li class="{{ !in_array(\Request::get('us'), ['0', '1']) ? 'active' : '' }}">
           <a href="javascript:void(0)" class="zedx-search color-darken" data-zedx-url-search="{{ route('ad.search') }}" data-zedx-us="all"><i class="fa fa-list-alt color-darken"></i> <span class="hidden-xs hidden-sm hidden-md">{!! trans('frontend.ad.search.all_ads') !!}</span></a>
         </li>

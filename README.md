@@ -1,4 +1,4 @@
-# ZEDx
+# ZEDx [![StyleCI](https://styleci.io/repos/60415706/shield)](https://styleci.io/repos/60415706)
 The PHP Classifieds CMS.
 
 ## Installation

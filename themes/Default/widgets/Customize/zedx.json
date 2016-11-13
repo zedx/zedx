@@ -1,0 +1,11 @@
+{
+  "component"   : "widget",
+  "type"        : "Frontend",
+  "name"        : "Customize",
+  "author"      : "Theme",
+  "title"       : "Customize",
+  "groups"      : ["customize"],
+  "description" : "Customize theme",
+  "keywords"    : [],
+  "version"     : "1.0.0"
+}

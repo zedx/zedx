@@ -1,4 +1,4 @@
-<div id="adFields" data-currency="{{ isset($ad) ? getAdCurrency($ad, '{currency}') : '' }}" data-fields="{{ isset($fields) ? $fields : '[]' }}"></div>
+<div id="adFields" data-currency="{{ isset($ad) ? getAdCurrency($ad, '{currency}') : '' }}" data-fields="{{ old('fields') ? json_encode(old('fields')) : '[]' }}"></div>
 <script type="x-tmpl-mustache" id="adFieldsTemplate_multiple">
 <div class="form-group">
   <label class="label-text" for="field_@{{id}}">@{{name}}</label>
@@ -40,12 +40,12 @@
 <div class="form-group">
   <label class="label-text" for="field_@{{id}}">@{{name}}</label>
 @{{#input}}
-  <input type="text" id="field_@{{id}}" class="form-control" name="fields[@{{id}}]" value="@{{value}}">
+  <input type="@{{inputType}}" id="field_@{{id}}" class="form-control" name="fields[@{{id}}]" value="@{{value}}">
 @{{/input}}
 
 @{{#inputGroup}}
   <div class="input-group">
-     <input type="text" id="field_@{{id}}" class="form-control" name="fields[@{{id}}]" value="@{{value}}">
+     <input type="@{{inputType}}" id="field_@{{id}}" class="form-control" name="fields[@{{id}}]" value="@{{value}}">
      <div class="input-group-addon">
         @{{unit}}
      </div>

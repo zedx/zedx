@@ -13,7 +13,7 @@
 
   <div class="panel-body">
   @forelse ($ads as $ad)
-    <div data-element-parent-action data-id="{{ $ad->id }}" data-title="{{ str_limit($ad->content->title, 20) }}">
+    <div data-element-parent-action data-id="{{ $ad->id }}" class="ad-details" data-title="{{ str_limit($ad->content->title, 20) }}">
       <div class="row">
         <div class="col-md-2">
             @if ($ad->adstatus->title == 'validate')
@@ -69,12 +69,17 @@
         </div>
          <div class="col-md-3">
             <h4>{{ ($price = $ad->price()) && isset($price->pivot) ? number_format($price->pivot->value, trans('frontend.format.number.decimals') , trans('frontend.format.number.dec_point'), trans('frontend.format.number.thousands_sep'))." ".getAdCurrency($ad, $price->unit) : ""  }}</h4>
-            @if ($ad->adtype->can_edit)
-            <a href="{{ route('user.ad.edit', $ad->id) }}" class="btn btn-primary btn-xs"><i class="fa fa-edit"> {!! trans('frontend.user.ad.edit') !!}</i></a>
-            @endif
-            <span>
-              <a href="#" class="btn btn-xs btn-danger" data-url = '{{ route("user.ad.destroy", [$ad->id]) }}' data-toggle="modal" data-target="#confirmDeleteAction" data-title="{{ $ad->content->title }}" data-message="{!! trans('frontend.user.ad.delete_ad_confirmation') !!}"><i class="fa fa-remove"> {!! trans('frontend.user.ad.delete') !!}</i></a>
-            </span>
+
+          <div class="dropdown pull-right ad-setting">
+              <button class="btn btn-default btn-circle dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-wrench"></i></button>
+              <ul class="dropdown-menu">
+                @if ($ad->adtype->can_edit)
+                <li><a href="{{ route('user.ad.edit', $ad->id) }}"><i class="fa fa-edit"> {!! trans('frontend.user.ad.edit') !!}</i></a></li>
+                <li class="divider"></li>
+                @endif
+                <li><a href="#" data-url = '{{ route("user.ad.destroy", [$ad->id]) }}' data-toggle="modal" data-target="#confirmDeleteAction" data-title="{{ $ad->content->title }}" data-message="{!! trans('frontend.user.ad.delete_ad_confirmation') !!}"><i class="fa fa-trash"> {!! trans('frontend.user.ad.delete') !!}</i></a></li>
+              </ul>
+          </div>
         </div>
       </div>
       <hr />
