@@ -49,6 +49,6 @@
   @empty
     <p class="text-center">{!! trans("frontend.ad.search.empty_ads_text") !!}</p>
   @endforelse
-
+  <center>{!! $ads->appends(\Request::all())->render() !!}</center>
   </div>
 </div>

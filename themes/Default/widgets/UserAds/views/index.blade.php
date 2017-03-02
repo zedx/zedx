@@ -88,6 +88,7 @@
     @empty
     <p class="text-center">{!! trans("frontend.user.ad.empty_ads_text") !!}</p>
     @endforelse
+    <center>{!! $ads->render() !!}</center>
   </div>
 </div>
 @include('widget_frontend_theme_userads::modals.delete')
