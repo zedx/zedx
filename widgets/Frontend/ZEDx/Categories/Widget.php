@@ -3,7 +3,6 @@
 namespace ZEDx\Widgets\Frontend\ZEDx\Categories;
 
 use ZEDx\Components\Widget as BaseWidget;
-use ZEDx\Models\Category;
 
 class Widget extends BaseWidget
 {
@@ -25,13 +24,13 @@ class Widget extends BaseWidget
     }
 
     /**
-     * Display widget
+     * Display widget.
      *
      * @return Response
      */
     public function run()
     {
-        return view("widget_frontend_zedx_categories::index", [
+        return view('widget_frontend_zedx_categories::index', [
             'config' => $this->config,
         ]);
     }
@@ -39,12 +38,13 @@ class Widget extends BaseWidget
     /**
      * Display the setting page of widget.
      *
-     * @param  string  $url
+     * @param string $url
+     *
      * @return Response
      */
     public function setting($url)
     {
-        return view("widget_frontend_zedx_categories::setting", [
+        return view('widget_frontend_zedx_categories::setting', [
             'config' => $this->config,
         ]);
     }
