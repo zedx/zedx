@@ -25,17 +25,17 @@ class Widget extends BaseWidget
     }
 
     /**
-     * Display widget
+     * Display widget.
      *
      * @return Response
      */
     public function run()
     {
-        $ad  = Request::route()->parameter('adValidated') ?: Request::route()->parameter('adPreview');
+        $ad = Request::route()->parameter('adValidated') ?: Request::route()->parameter('adPreview');
         $max = array_get($this->config, 'max', 3);
         $max = is_numeric($max) ? $max : 3;
 
-        return view("widget_frontend_zedx_similarads::index", [
+        return view('widget_frontend_zedx_similarads::index', [
             'config' => $this->config,
             'ads'    => $ad->category->ads()->where('adstatus_id', '=', 1)->paginate($max),
         ]);
@@ -44,12 +44,13 @@ class Widget extends BaseWidget
     /**
      * Display the setting page of widget.
      *
-     * @param  string  $url
+     * @param string $url
+     *
      * @return Response
      */
     public function setting($url)
     {
-        return view("widget_frontend_zedx_similarads::setting", [
+        return view('widget_frontend_zedx_similarads::setting', [
             'config' => $this->config,
             'url'    => $url,
         ]);
