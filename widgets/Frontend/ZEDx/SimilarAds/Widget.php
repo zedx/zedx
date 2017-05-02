@@ -37,7 +37,7 @@ class Widget extends BaseWidget
 
         return view('widget_frontend_zedx_similarads::index', [
             'config' => $this->config,
-            'ads'    => $ad->category->ads()->where('adstatus_id', '=', 1)->paginate($max),
+            'ads'    => $ad->category->ads()->validate()->paginate($max),
         ]);
     }
 
