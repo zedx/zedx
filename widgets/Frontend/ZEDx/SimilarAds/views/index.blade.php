@@ -16,14 +16,12 @@
         </a>
         @endif
       </div>
-      <div class="col-md-6">
+      <div class="col-md-9">
          <h4><a href="{{ route('ad.show', array($ad->id, str_slug($ad->content->title))) }}">
          @if ($ad->is_headline) <i class="fa fa-star color-orange"></i> @endif {{ $ad->content->title }}</a>
          </h4>
-        <p>{{ $ad->published_at->diffForHumans() }}</p>
-      </div>
-       <div class="col-md-3">
         <h5>{{ ($price = $ad->price()) && isset($price->pivot) ? number_format($price->pivot->value, trans('frontend.format.number.decimals') , trans('frontend.format.number.dec_point'), trans('frontend.format.number.thousands_sep'))." ".getAdCurrency($ad, $price->unit) : ""  }}</h5>
+        <p>{{ $ad->published_at->diffForHumans() }}</p>
       </div>
     </div>
     <!-- /.row -->
