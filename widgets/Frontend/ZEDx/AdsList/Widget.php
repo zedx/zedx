@@ -25,7 +25,7 @@ class Widget extends BaseWidget
     }
 
     /**
-     * Display widget
+     * Display widget.
      *
      * @return Response
      */
@@ -44,12 +44,13 @@ class Widget extends BaseWidget
     /**
      * Display the setting page of widget.
      *
-     * @param  string  $url
+     * @param string $url
+     *
      * @return Response
      */
     public function setting($url)
     {
-        return view("widget_frontend_zedx_adslist::setting", [
+        return view('widget_frontend_zedx_adslist::setting', [
             'config' => $this->config,
             'url'    => $url,
         ]);
@@ -57,7 +58,6 @@ class Widget extends BaseWidget
 
     protected function getAds()
     {
-
         $ads = Ad::validate();
         $this->filterByAdType($ads);
         $this->filterByUserType($ads);
@@ -87,8 +87,8 @@ class Widget extends BaseWidget
         }
 
         return $ads->whereHas('adtype', function ($scope) use ($ad_type) {
-                $scope->where('is_headline', $ad_type == 'premium');
-            });
+            $scope->where('is_headline', $ad_type == 'premium');
+        });
     }
 
     protected function filterByPhotos(&$ads)
@@ -115,7 +115,7 @@ class Widget extends BaseWidget
         }
 
         return $ads->whereHas('user', function ($scope) use ($user_type) {
-                $scope->where('status', $user_type == 'pro');
-            });
+            $scope->where('status', $user_type == 'pro');
+        });
     }
 }
