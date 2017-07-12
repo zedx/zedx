@@ -299,15 +299,21 @@ $(document).ready(function() {
     }
   }
 
+  var isValidImage = function(fileName) {
+    var fileTypes = ['jpg', 'jpeg', 'gif', 'png', 'bmp'],
+      extension = fileName.split('.').pop().toLowerCase();
+
+    return fileTypes.indexOf(extension) > -1;
+  }
+
   var makeSmartPreview = function($this) {
     if (typeof (FileReader) != "undefined") {
       var src,
         html,
-        regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/,
         files = $this[0].files;
 
       $(files).each(function (index, file) {
-        if (regex.test(file.name.toLowerCase())) {
+        if (isValidImage(file.name)) {
           var reader = new FileReader();
           reader.onload = function (e) {
             src= e.target.result;
