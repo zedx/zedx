@@ -280,8 +280,8 @@ $(document).ready(function() {
     var emptyPhotoAttr = $this.attr('data-empty-photo');
     if (typeof emptyPhotoAttr !== typeof undefined && emptyPhotoAttr !== false) {
       var $photos = $("#photos"),
-      updateText = $photos.data("text-update"),
-      deleteText = $photos.data("text-delete");
+      updateText = '';//$photos.data("text-update"),
+      deleteText = '';//$photos.data("text-delete");
 
       $this.removeAttr('data-empty-photo');
       $this.attr('data-photo', '');
