@@ -20,7 +20,7 @@
     <div class="panel-body">
         <div class="panel-title">
           <div class="ad-details-header">
-            <h1 id="zedx-ad-title" class="ad-title no-margin mb10">{{ $ad->content->title }}</h1>
+            <h1 id="zedx-ad-title" class="zedx-ad-title no-margin mb10">{{ $ad->content->title }}</h1>
             <div class="ad-details-header-info fs13">
               @if ($ad->adstatus->title == 'validate')
               <small>{!! trans('frontend.user.ad.published_at', ['time' => $ad->published_at->diffForHumans()]) !!}</small>
@@ -46,7 +46,7 @@
           <div class="col-md-12">
             <ul class="bxslider">
               @foreach ($photos as $photo)
-                <li><img class="img-rounded center-block" src="{{ image_route('large', $photo->path) }}" /></li>
+                <li><img class="img-rounded center-block" src="{{ image_route('large', $photo->path) }}" alt="{{ $ad->content->title }}" title="{{ $ad->content->title }}" /></li>
               @endforeach
             </ul>
           </div>
@@ -56,7 +56,7 @@
         <div class="ad-photos">
           <div id="bx-pager" class="row">
             @foreach ($photos as $key => $photo)
-              <a data-slide-index="{{ $key }}" href=""><img class="img-rounded small-image" src="{{ image_route('thumb', $photo->path) }}" /></a>
+              <a data-slide-index="{{ $key }}" href=""><img class="img-rounded small-image" src="{{ image_route('thumb', $photo->path) }}" alt="{{ $ad->content->title }}" title="{{ $ad->content->title }}" /></a>
             @endforeach
           </div>
         </div>
