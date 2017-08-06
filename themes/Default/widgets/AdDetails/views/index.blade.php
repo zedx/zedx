@@ -1,3 +1,14 @@
+@section('meta')
+<meta property="og:title" content="{{ $ad->content->title }}" />
+<meta property="og:url" content="{{ route('ad.show', array($ad->id, str_slug($ad->content->title))) }}" />
+<meta property="og:description" content="{{ str_limit($ad->content->body, 150) }}" />
+{{--*/ $mainPhoto = $ad->photos()->main()->first();  /*--}}
+@if ($mainPhoto)
+<meta property="og:image" content="{{ image_route('large', $mainPhoto->path) }}" />
+<meta property="og:image:alt" content="{{ $ad->content->title }}" />
+@endif
+@append
+
 <div class="panel @if (Route::is('ad.preview')) ad-preview panel-primary @else panel-default @endif">
     @if (Route::is('ad.preview'))
     <div class="panel-heading">

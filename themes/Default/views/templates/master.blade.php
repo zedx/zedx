@@ -10,6 +10,8 @@
         <meta content="ZEDx - the PHP Classifieds CMS" name="generator"/>
         <meta content="#da532c" name="msapplication-TileColor"/>
         <meta content="#ffffff" name="theme-color"/>
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="{{ setting('website_name') }}" />
         @yield('meta')
 
         <link href="{{ public_asset(elixir_frontend('css/styles.css')) }}" rel="stylesheet" type="text/css"/>
