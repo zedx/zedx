@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ env('APP_LOCALE', 'env') }}">
     <head>
+        <title>{{ $page->name }}</title>
         <meta charset="utf-8"/>
         <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
@@ -26,9 +27,6 @@
         <link color="#1abc9c" href="{{ public_asset('favicons/safari-pinned-tab.svg') }}" rel="mask-icon"/>
         @yield('css')
 
-        <title>
-            {{ $page->name }}
-        </title>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
