@@ -72,7 +72,7 @@ jQuery(function($) {
                         tip.hide(d);
                     })
                     .on('click', function(path) {
-                        link = baseUrl + "/ad/search/categories/" + path.name + "?q=&c=all&lat=" + path.lat + "&lng=" + path.lng + "&radius=" + path.radius + "&us=all";
+                        link = baseUrl + "/ad/search/categories/" + path.name + "-" + mapData.country + "?q=&c=all&lat=" + path.lat + "&lng=" + path.lng + "&radius=" + path.radius + "&us=all";
                         location.href = link;
                     });
             });

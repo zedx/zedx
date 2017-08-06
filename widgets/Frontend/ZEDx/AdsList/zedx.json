@@ -1,0 +1,30 @@
+{
+  "component"   : "widget",             //  Don't change it.
+  "type"        : "Frontend",      //  Don't change it.
+  "name"        : "AdsList",      //  Don't change it.
+  "author"      : "ZEDx",    //  Don't change it.
+
+  /*
+   * Widget Title
+   */
+  "title"       : "AdsList",
+
+
+  /*
+   * Groups [ Backend Widgets doesn't use this option. ]
+   *
+   * In which group this widget should be visible ?
+   *
+   * Available groups:
+   *
+   * userLogin, userPasswordEmail, userPasswordReset, userRegister, userAdList, userAdType,
+   * userAdCreate, userAdEdit, userAdtypeList, userAdtypeCart, userSubscriptionList,
+   * userSubscriptionCart, userEdit, adSearch, adShow, page
+   *
+   * Leave empty if this widget can be used on all groups
+   */
+  "groups"      : [],
+  "description" : "Ads list",
+  "keywords"    : [],
+  "version"     : "1.0.0"
+}

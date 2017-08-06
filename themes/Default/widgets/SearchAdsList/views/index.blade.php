@@ -27,7 +27,7 @@
       <div class="col-md-2">
         @if ($main_pic = $ad->photos()->main()->first())
         <a href="{{ route('ad.show', array($ad->id, str_slug($ad->title))) }}">
-          <img class="img-responsive img-rounded" src="{{ image_route('thumb', $main_pic->path) }}" alt="">
+          <img class="img-responsive img-rounded" src="{{ image_route('thumb', $main_pic->path) }}" alt="{{ $ad->title }}" title="{{ $ad->title }}">
         </a>
         @else
         <a href="{{ route('ad.show', array($ad->id, str_slug($ad->title))) }}">
@@ -49,6 +49,6 @@
   @empty
     <p class="text-center">{!! trans("frontend.ad.search.empty_ads_text") !!}</p>
   @endforelse
-
+  <center>{!! $ads->appends(\Request::all())->render() !!}</center>
   </div>
 </div>

@@ -1,0 +1,30 @@
+{
+  "component"   : "widget",             //  Don't change it.
+  "type"        : "Frontend",      //  Don't change it.
+  "name"        : "Categories",      //  Don't change it.
+  "author"      : "ZEDx",    //  Don't change it.
+
+  /*
+   * Widget Title
+   */
+  "title"       : "Categories",
+
+
+  /*
+   * Groups [ Backend Widgets doesn't use this option. ]
+   *
+   * In which group this widget should be visible ?
+   *
+   * Available groups:
+   *
+   * userLogin, userPasswordEmail, userPasswordReset, userRegister, userAdList, userAdType,
+   * userAdCreate, userAdEdit, userAdtypeList, userAdtypeCart, userSubscriptionList,
+   * userSubscriptionCart, userEdit, adSearch, adShow, page
+   *
+   * Leave empty if this widget can be used on all groups
+   */
+  "groups"      : [],
+  "description" : "Show all categories",
+  "keywords"    : [],
+  "version"     : "1.0.0"
+}
