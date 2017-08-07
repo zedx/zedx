@@ -280,8 +280,8 @@ $(document).ready(function() {
     var emptyPhotoAttr = $this.attr('data-empty-photo');
     if (typeof emptyPhotoAttr !== typeof undefined && emptyPhotoAttr !== false) {
       var $photos = $("#photos"),
-      updateText = '';//$photos.data("text-update"),
-      deleteText = '';//$photos.data("text-delete");
+      updateText = $photos.data("text-update"),
+      deleteText = $photos.data("text-delete");
 
       $this.removeAttr('data-empty-photo');
       $this.attr('data-photo', '');
@@ -299,21 +299,15 @@ $(document).ready(function() {
     }
   }
 
-  var isValidImage = function(fileName) {
-    var fileTypes = ['jpg', 'jpeg', 'gif', 'png', 'bmp'],
-      extension = fileName.split('.').pop().toLowerCase();
-
-    return fileTypes.indexOf(extension) > -1;
-  }
-
   var makeSmartPreview = function($this) {
     if (typeof (FileReader) != "undefined") {
       var src,
         html,
+        regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/,
         files = $this[0].files;
 
       $(files).each(function (index, file) {
-        if (isValidImage(file.name)) {
+        if (regex.test(file.name.toLowerCase())) {
           var reader = new FileReader();
           reader.onload = function (e) {
             src= e.target.result;

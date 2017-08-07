@@ -1,14 +1,3 @@
-@section('meta')
-<meta property="og:title" content="{{ $ad->content->title }}" />
-<meta property="og:url" content="{{ route('ad.show', array($ad->id, str_slug($ad->content->title))) }}" />
-<meta property="og:description" content="{{ str_limit($ad->content->body, 150) }}" />
-{{--*/ $mainPhoto = $ad->photos()->main()->first();  /*--}}
-@if ($mainPhoto)
-<meta property="og:image" content="{{ image_route('large', $mainPhoto->path) }}" />
-<meta property="og:image:alt" content="{{ $ad->content->title }}" />
-@endif
-@append
-
 <div class="panel @if (Route::is('ad.preview')) ad-preview panel-primary @else panel-default @endif">
     @if (Route::is('ad.preview'))
     <div class="panel-heading">
@@ -31,7 +20,7 @@
     <div class="panel-body">
         <div class="panel-title">
           <div class="ad-details-header">
-            <h1 id="zedx-ad-title" class="zedx-ad-title no-margin mb10">{{ $ad->content->title }}</h1>
+            <h1 id="zedx-ad-title" class="ad-title no-margin mb10">{{ $ad->content->title }}</h1>
             <div class="ad-details-header-info fs13">
               @if ($ad->adstatus->title == 'validate')
               <small>{!! trans('frontend.user.ad.published_at', ['time' => $ad->published_at->diffForHumans()]) !!}</small>
@@ -57,7 +46,7 @@
           <div class="col-md-12">
             <ul class="bxslider">
               @foreach ($photos as $photo)
-                <li><img class="img-rounded center-block" src="{{ image_route('large', $photo->path) }}" alt="{{ $ad->content->title }}" title="{{ $ad->content->title }}" /></li>
+                <li><img class="img-rounded center-block" src="{{ image_route('large', $photo->path) }}" /></li>
               @endforeach
             </ul>
           </div>
@@ -67,7 +56,7 @@
         <div class="ad-photos">
           <div id="bx-pager" class="row">
             @foreach ($photos as $key => $photo)
-              <a data-slide-index="{{ $key }}" href=""><img class="img-rounded small-image" src="{{ image_route('thumb', $photo->path) }}" alt="{{ $ad->content->title }}" title="{{ $ad->content->title }}" /></a>
+              <a data-slide-index="{{ $key }}" href=""><img class="img-rounded small-image" src="{{ image_route('thumb', $photo->path) }}" /></a>
             @endforeach
           </div>
         </div>
@@ -144,14 +133,5 @@
             <div class="ad-description">{{ $ad->content->body }}</div>
           </div>
         </div>
-    </div>
-    <div class="panel-footer">
-      <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-      <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-      <a class="a2a_button_facebook"></a>
-      <a class="a2a_button_twitter"></a>
-      <a class="a2a_button_google_plus"></a>
-      </div>
-      <script async src="https://static.addtoany.com/menu/page.js"></script>
     </div>
 </div>

@@ -95,8 +95,6 @@ class Widget extends BaseWidget
             }
         }
 
-        $content .= $inputs['css'];
-
         return $content;
     }
 }
