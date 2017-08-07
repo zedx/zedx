@@ -1,7 +1,4 @@
-@section('css')
 <link rel="stylesheet" href="{{ public_asset('widgets/frontend/theme/usercontact/avatar.css') }}">
-@append
-
 <ul class="list-group">
   <li class="list-group-item text-center">
     <div class="item-user-avatar text-center">

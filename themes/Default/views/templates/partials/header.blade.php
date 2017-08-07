@@ -1,7 +1,7 @@
 <header class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-      <a href="{{ url("") }}" id="zedx-home-link"><img src="{{ public_asset('logo.png') }}" id="zedx-logo" class="logo" alt="{{ setting('website_name') }}" title="{{ setting('website_name') }}"></a>
+      <a href="{{ url("") }}" id="zedx-home-link"><img src="{{ public_asset('logo.png') }}" id="zedx-logo" class="logo"></a>
       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
